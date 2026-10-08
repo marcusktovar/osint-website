@@ -1,0 +1,14 @@
+{
+  "name": "CIA World Factbook — archived Yemen entry",
+  "url": "https://the-world-factbook.org/the-world-factbook/countries/yemen/",
+  "edition_date": "2026-01-05",
+  "description": "Archived copy; historical snapshot, not a live CIA feed.",
+  "facts": {
+    "area_sq_km": 527968,
+    "coastline_km": 1906,
+    "land_borders_km": 1601,
+    "neighbors": ["Saudi Arabia", "Oman"],
+    "waterfront": ["Red Sea", "Gulf of Aden", "Arabian Sea"],
+    "official_language": "Arabic"
+  }
+}

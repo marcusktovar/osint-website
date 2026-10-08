@@ -1,0 +1,61 @@
+{
+  "edition_note": "An educational country guide. Descriptive text is edited and should be reviewed periodically; political conditions may change rapidly.",
+  "sources": {
+    "wiki_yemen": {"name":"Wikipedia · Yemen","url":"https://en.wikipedia.org/wiki/Yemen","kind":"Encyclopedia · contextual overview"},
+    "wiki_geography": {"name":"Wikipedia · Geography of Yemen","url":"https://en.wikipedia.org/wiki/Geography_of_Yemen","kind":"Encyclopedia · contextual overview"},
+    "wiki_history": {"name":"Wikipedia · History of Yemen","url":"https://en.wikipedia.org/wiki/History_of_Yemen","kind":"Encyclopedia · historical overview"},
+    "wiki_politics": {"name":"Wikipedia · Politics of Yemen","url":"https://en.wikipedia.org/wiki/Politics_of_Yemen","kind":"Encyclopedia · background, not breaking news"},
+    "wiki_culture": {"name":"Wikipedia · Culture of Yemen","url":"https://en.wikipedia.org/wiki/Culture_of_Yemen","kind":"Encyclopedia · cultural overview"},
+    "wikidata": {"name":"Wikidata · Yemen (Q805)","url":"https://www.wikidata.org/wiki/Q805","kind":"Structured open data"},
+    "worldbank": {"name":"World Bank · Population, total","url":"https://data.worldbank.org/indicator/SP.POP.TOTL?locations=YE","kind":"Statistical series · year specified"},
+    "cia_archive": {"name":"CIA World Factbook · archival copy","url":"https://the-world-factbook.org/the-world-factbook/countries/yemen/","kind":"Historical country profile · Jan 2026"},
+    "unesco": {"name":"UNESCO · World Heritage in Yemen","url":"https://whc.unesco.org/en/statesparties/ye/","kind":"World Heritage List"},
+    "unesco_sanaa": {"name":"UNESCO · Old City of Sana'a","url":"https://whc.unesco.org/en/list/385/","kind":"World Heritage site description"},
+    "unocha": {"name":"UN OCHA · Yemen","url":"https://www.unocha.org/yemen","kind":"Current humanitarian context · review manually"}
+  },
+  "sections": [
+    {
+      "id":"overview", "number":"01", "eyebrow":"COUNTRY PROFILE", "title":"A place at the crossroads", "subtitle":"An introduction to the Republic of Yemen.",
+      "paragraphs":[
+        {"text":"Yemen lies at the southern end of the Arabian Peninsula, where the Red Sea, Gulf of Aden and Arabian Sea connect important maritime routes. Its landscapes and communities have long linked the Arabian Peninsula to the Horn of Africa and the wider Indian Ocean.","sources":["wiki_yemen","cia_archive"]},
+        {"text":"The country is home to mountain cities, coastal ports, agricultural terraces and island ecosystems. Its long cultural history is visible in architecture, trade traditions and UNESCO-recognized heritage sites.","sources":["wiki_yemen","unesco"]}
+      ]
+    },
+    {
+      "id":"geography", "number":"02", "eyebrow":"LAND & NATURE", "title":"From highlands to sea", "subtitle":"Mountains, deserts, islands and a long coastline.",
+      "paragraphs":[
+        {"text":"Yemen borders Saudi Arabia to the north and Oman to the east. Narrow coastal lowlands give way to elevated western highlands, while drier plateaus and desert terrain extend inland.","sources":["wiki_geography","cia_archive"]},
+        {"text":"The Socotra Archipelago is especially notable for its biodiversity and is inscribed on UNESCO's World Heritage List.","sources":["wiki_geography","unesco"]}
+      ]
+    },
+    {
+      "id":"history", "number":"03", "eyebrow":"THROUGH TIME", "title":"Centuries of exchange", "subtitle":"Ancient kingdoms, trade routes and modern unification.",
+      "paragraphs":[
+        {"text":"The region's history stretches back to ancient South Arabian kingdoms, including Saba. Trade networks, agriculture and distinctive urban settlements shaped the region over many centuries.","sources":["wiki_history","unesco"]},
+        {"text":"In more recent history, northern and southern Yemen developed separate political paths before forming a unified republic in 1990. Subsequent decades have included periods of political upheaval and conflict.","sources":["wiki_history","wikidata"]}
+      ]
+    },
+    {
+      "id":"government", "number":"04", "eyebrow":"PUBLIC LIFE", "title":"Government & society", "subtitle":"A changing political landscape that needs careful sourcing.",
+      "paragraphs":[
+        {"text":"Yemen's formal state framework is republican, but years of conflict have complicated institutions, governance and territorial control. Descriptions of officeholders or who controls a particular area can change and should not be inferred from older encyclopedia entries.","sources":["wiki_politics","unocha"]},
+        {"text":"This section deliberately gives durable background rather than claiming a real-time picture of the government. For current developments, consult dated reports from reliable organizations and compare multiple sources.","sources":["wiki_politics","unocha"]}
+      ],
+      "notice":"Current political and humanitarian conditions require manual review; this page is not a live news service."
+    },
+    {
+      "id":"culture", "number":"05", "eyebrow":"PEOPLE & HERITAGE", "title":"Culture worth exploring", "subtitle":"Architecture, language and traditions.",
+      "paragraphs":[
+        {"text":"Arabic is Yemen's official language, and the country's cultural life reflects regional traditions in poetry, music, food, architecture and the social rituals of hospitality.","sources":["wiki_culture","cia_archive"]},
+        {"text":"UNESCO recognizes five World Heritage properties in Yemen, including the Old City of Sana'a, the Old Walled City of Shibam, the Historic Town of Zabid, the Saba landmarks at Marib and the Socotra Archipelago.","sources":["unesco","unesco_sanaa"]}
+      ]
+    },
+    {
+      "id":"people", "number":"06", "eyebrow":"BY THE NUMBERS", "title":"People & data", "subtitle":"Interpreting country statistics with dates and sources.",
+      "paragraphs":[
+        {"text":"Population totals are estimates or census-based statistical series and are not interchangeable with counts from different years. This page uses the World Bank's most recent available non-empty observation when the data service can be reached.","sources":["worldbank"]},
+        {"text":"Data quality and availability can be affected by conflict and displacement. Always read the year next to any figure rather than assuming it describes the present day.","sources":["worldbank","unocha"]}
+      ]
+    }
+  ]
+}
