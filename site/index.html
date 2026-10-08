@@ -3,94 +3,84 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="An accessible, carefully sourced introduction to Yemen's geography, history, government, culture and people.">
-  <meta name="theme-color" content="#1c2525">
-  <title>Yemen — Field Notes</title>
+  <meta name="theme-color" content="#071719">
+  <meta name="description" content="Atlas Archive: a retro-inspired interactive world atlas with source-backed country dossiers.">
+  <title>ATLAS / GLOBAL DOSSIER — Interactive Country Explorer</title>
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
   <link rel="stylesheet" href="./style.css">
-  <script src="./app.js" defer></script>
+  <script defer src="./app.js"></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to main content</a>
-  <header class="site-header">
-    <div class="header-inner shell">
-      <a href="#top" class="brand" aria-label="Yemen Field Notes, back to top">
-        <span class="flag" aria-hidden="true"><i></i><i></i><i></i></span>
-        <span>YEMEN <small>/ FIELD NOTES</small></span>
-      </a>
-      <nav class="primary-nav" aria-label="Main navigation">
-        <a href="#overview">Overview</a>
-        <a href="#geography">Geography</a>
-        <a href="#history">History</a>
-        <a href="#government">Government</a>
-        <a href="#culture">Culture</a>
-        <a href="#people">People</a>
-        <a href="#sources">Sources</a>
-      </nav>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="app-shell">
+    <header class="top-bar">
+      <div class="brand-mark" aria-hidden="true"><span>◎</span></div>
+      <div class="brand-copy"><div class="brand-title">ATLAS<span class="brand-divider">/</span>ARCHIVE <sup>01</sup></div><div class="brand-sub">GLOBAL GEOGRAPHIC INTELLIGENCE TERMINAL</div></div>
+      <div class="head-mode"><span class="led"></span> SYSTEM ONLINE <span class="head-mode-soft">/ CARTOGRAPHIC INTERFACE</span></div>
+      <div class="header-clock"><span class="clock-label">UTC // ZULU</span><time id="utc-clock">00:00:00</time></div>
+    </header>
+
+    <div class="workspace">
+      <aside class="left-panel instrument-panel" aria-label="Country selection">
+        <div class="panel-heading"><span><b class="block-marker">▣</b> COUNTRY INDEX</span><small id="index-total">177 RECORDS</small></div>
+        <div class="left-intro"><span class="dot-online"></span> SELECT A NATION TO OPEN ITS DOSSIER</div>
+        <label class="search-area" for="search-countries"><span class="search-prompt">&gt;</span><input id="search-countries" type="search" placeholder="SEARCH COUNTRY / ISO..." autocomplete="off" spellcheck="false" aria-label="Search countries"><kbd>/</kbd></label>
+        <div class="field-header">QUICK ACCESS <span>◀ STATIC PINS ▶</span></div>
+        <div id="quick-access" class="quick-access" aria-label="Featured countries"></div>
+        <div class="selector-toolbar"><label for="region-filter">REGION</label><select id="region-filter" aria-label="Filter countries by region"><option value="all">ALL REGIONS</option><option value="Africa">AFRICA</option><option value="Asia">ASIA</option><option value="Europe">EUROPE</option><option value="North America">NORTH AMERICA</option><option value="South America">SOUTH AMERICA</option><option value="Oceania">OCEANIA</option><option value="Antarctica">ANTARCTICA</option></select></div>
+        <div class="list-header"><span>COUNTRY / TERRITORY</span><span>ISO</span></div>
+        <div id="country-list" class="country-list" role="listbox" aria-label="Choose a country"></div>
+        <div class="left-footer"><span class="status-sq"></span><span id="list-count">LOADING INDEX</span><span class="left-footer-right">MAP_01</span></div>
+      </aside>
+
+      <main class="map-panel" aria-label="Interactive world map">
+        <div class="map-toolbar"><div class="map-toolbar-main"><span class="map-top-dot"></span> THE WORLD <span class="map-toolbar-sep">//</span> GEOGRAPHIC SURVEY <span id="map-mode">GLOBAL VIEW</span></div><div class="coordinates">CURSOR <span id="coordinates">000.0° E / 00.0° N</span></div></div>
+        <div class="map-stage" id="map-stage">
+          <div class="map-grain" aria-hidden="true"></div>
+          <div class="compass" aria-hidden="true"><span>N</span><i></i><span>S</span></div>
+          <div class="map-corner map-corner-tl" aria-hidden="true"></div><div class="map-corner map-corner-tr" aria-hidden="true"></div><div class="map-corner map-corner-bl" aria-hidden="true"></div><div class="map-corner map-corner-br" aria-hidden="true"></div>
+          <div class="map-label-top">WORLD GRID / NATURAL EARTH 1:110M <span>•</span> <span id="map-dataset">LOADING GEOMETRY</span></div>
+          <svg id="world-map" viewBox="0 0 1440 680" role="img" aria-label="Clickable political world map. Select a country, then use zoom controls to examine it.">
+            <defs><pattern id="map-hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(42)"><path d="M0 0V9" stroke="#9be5ce" stroke-opacity=".035" stroke-width="2"/></pattern></defs>
+            <rect x="0" y="0" width="1440" height="680" fill="#082923"></rect>
+            <g id="grid-lines" aria-hidden="true"></g>
+            <g id="countries-layer"></g>
+            <g id="labels-layer" pointer-events="none"></g>
+          </svg>
+          <div class="map-focus-tag" id="map-focus-tag"><span class="pulse-dot"></span> TRACKING <b id="focus-name">YEMEN</b></div>
+          <div class="map-help">DRAG TO PAN <span>·</span> SCROLL TO ZOOM <span>·</span> CLICK A COUNTRY</div>
+          <div class="zoom-controls" aria-label="Map controls"><button id="zoom-in" type="button" title="Zoom in" aria-label="Zoom in">+</button><span id="zoom-value" aria-live="polite">100%</span><button id="zoom-out" type="button" title="Zoom out" aria-label="Zoom out">−</button><button id="zoom-reset" class="reset-button" type="button" title="Reset full world view">RESET</button></div>
+        </div>
+        <div class="map-bottom"><span><span class="legend-dot selected-legend"></span> SELECTED</span><span><span class="legend-dot land-legend"></span> LANDMASS</span><span><span class="legend-line"></span> BORDERS</span><span class="map-bottom-note">GENERALIZED BOUNDARIES · NOT A LEGAL BORDER DETERMINATION</span></div>
+      </main>
+
+      <aside class="right-panel instrument-panel" aria-label="Selected country information">
+        <div class="panel-heading"><span><b class="block-marker">▤</b> COUNTRY DOSSIER</span><small id="profile-id">REC / YEM</small></div>
+        <div class="dossier-head"><div class="dossier-flag" id="country-flag" aria-hidden="true">🇾🇪</div><div class="dossier-heading"><div class="dossier-overline">SELECTED GEOGRAPHIC ENTITY</div><h1 id="country-title">YEMEN</h1><div id="country-subtitle" class="dossier-subtitle">ASIA <span> / </span> ARABIAN PENINSULA</div></div></div>
+        <div class="identifier-row"><span>COUNTRY IDENTIFIER</span><b id="country-code">YEM / YE</b></div>
+        <div class="status-ribbon"><span class="ribbon-pill">● DOSSIER ACTIVE</span><span id="profile-edition">REFERENCE BUILD</span></div>
+        <div class="fact-head">01 <span>GENERAL DATA</span><i></i></div>
+        <div class="fact-grid">
+          <div class="fact-cell"><div>CAPITAL / SEAT</div><strong id="fact-capital">—</strong></div>
+          <div class="fact-cell"><div>LAND AREA</div><strong id="fact-area">—</strong><small>KM²</small></div>
+          <div class="fact-cell"><div>POPULATION</div><strong id="fact-population">—</strong><small id="fact-pop-year">DATED OBSERVATION</small></div>
+          <div class="fact-cell"><div>LANGUAGE(S)</div><strong id="fact-language">—</strong></div>
+          <div class="fact-cell"><div>REGION</div><strong id="fact-region">—</strong></div>
+          <div class="fact-cell"><div>CURRENCY</div><strong id="fact-currency">—</strong></div>
+        </div>
+        <div class="fact-data-source" id="fact-data-source">METADATA: HISTORICAL REFERENCE · POPULATION: DATED WORLD BANK</div>
+        <div class="fact-head">02 <span>FIELD REPORT</span><i></i></div>
+        <div class="topic-tabs" id="topic-tabs" role="tablist" aria-label="Country information topics"><button class="active" data-tab="overview" type="button" role="tab" aria-selected="true">OVERVIEW</button><button data-tab="history" type="button" role="tab" aria-selected="false">HISTORY</button><button data-tab="geography" type="button" role="tab" aria-selected="false">TERRAIN</button><button data-tab="culture" type="button" role="tab" aria-selected="false">CULTURE</button></div>
+        <div class="report-box" id="topic-pane" role="tabpanel" tabindex="0"><div id="report-title" class="report-title">// COUNTRY OVERVIEW</div><p id="report-text">Loading researched country briefing…</p><div id="report-caution" class="report-caution" hidden></div></div>
+        <div class="fact-head">03 <span>OPEN SOURCES</span><i></i></div>
+        <div id="source-links" class="source-links" aria-label="Research and data sources"></div>
+        <div class="right-footer"><span>BUILD: <time id="build-date">REFERENCE</time></span><span id="right-source-state">SOURCE LINKS READY</span></div>
+      </aside>
     </div>
-  </header>
 
-  <main id="main">
-    <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="hero-grain" aria-hidden="true"></div>
-      <div class="shell hero-grid">
-        <div class="hero-copy">
-          <div class="kicker"><span class="kicker-line"></span> AN INDEPENDENT COUNTRY GUIDE <span class="edition-mark">EDITION 01</span></div>
-          <h1 id="hero-title">Yemen<span class="hero-dot">.</span></h1>
-          <p class="hero-lede">A country of layered histories, mountain cities, dramatic landscapes and extraordinary cultural heritage.</p>
-          <div class="hero-actions">
-            <a class="primary-btn" href="#overview">Explore the guide <span aria-hidden="true">↗</span></a>
-            <a class="secondary-btn" href="#sources">How it's sourced <span aria-hidden="true">↗</span></a>
-          </div>
-          <div class="hero-meta"><span class="status-pulse"></span><span id="edition-status">Dated research snapshot · preparing content</span></div>
-        </div>
-        <div class="hero-art" aria-label="Decorative illustration inspired by geometric forms, not a geographic map" role="img">
-          <div class="art-topline"><span>15° N / 48° E</span><span>ARABIAN PENINSULA</span></div>
-          <div class="sun"></div><div class="horizon h3"></div><div class="horizon h2"></div><div class="horizon h1"></div>
-          <div class="tower tower-a"><i></i><i></i><i></i></div><div class="tower tower-b"><i></i><i></i><i></i><i></i></div><div class="tower tower-c"><i></i><i></i></div>
-          <div class="art-footer"><span>THE RED SEA</span><span>•</span><span>HIGHLANDS</span><span>•</span><span>SOCOTRA</span></div>
-        </div>
-      </div>
-      <div class="hero-bottom shell"><span>GEOGRAPHY / HISTORY / CULTURE</span><span>SCROLL TO EXPLORE ↓</span></div>
-    </section>
-
-    <section class="stat-band" aria-labelledby="stat-heading">
-      <div class="shell">
-        <div class="stat-heading"><p class="eyebrow">THE ESSENTIALS</p><h2 id="stat-heading">Yemen at a glance</h2></div>
-        <div class="stat-grid" id="stats" aria-live="polite"><p>Loading country facts…</p></div>
-        <p class="small-print">Figures carry their own reference year or source edition. Different sources and methodologies can produce different totals.</p>
-      </div>
-    </section>
-
-    <section class="section-directory shell" aria-label="Explore topics">
-      <span class="eyebrow">YOUR GUIDE</span><span class="directory-divider"></span><span>Six perspectives on Yemen</span><span class="directory-arrow" aria-hidden="true">↘</span>
-    </section>
-
-    <div class="shell section-list" id="sections" aria-live="polite">
-      <p class="loading-state" id="loading-message">Loading the source-verified guide…</p>
-    </div>
-
-    <section id="sources" class="sources-section">
-      <div class="shell sources-layout">
-        <div class="sources-intro">
-          <p class="eyebrow">TRANSPARENCY</p>
-          <h2>Behind the<br><em>information.</em></h2>
-          <p>Instead of reproducing a single article, this guide combines edited background research with dated reference material and structured data.</p>
-          <p class="method-note" id="methodology">Methodology details will load with the guide.</p>
-        </div>
-        <div class="source-list-wrap">
-          <div class="source-list-title"><span>REFERENCE LIBRARY</span><span>↗</span></div>
-          <ul class="source-list" id="source-list"><li>Loading references…</li></ul>
-          <p class="source-license">Original narrative and design are part of this starter project. External source information retains its own attribution and licensing conditions. Follow each source link for its licensing terms.</p>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer class="footer">
-    <div class="shell footer-inner">
-      <div><strong>YEMEN <span>/ FIELD NOTES</span></strong><p>An educational project. Not an official government or news website.</p></div>
-      <div class="footer-right"><span id="footer-updated">Starter edition</span><a href="#top">Back to top ↑</a></div>
-    </div>
-  </footer>
+    <footer class="global-footer"><div class="terminal-foot"><span class="tiny-led"></span><span>ATLAS ARCHIVE</span><span class="footer-sep">///</span><span id="global-status">LOADING WORLD INDEX...</span></div><div class="footer-middle">INFORMATIONAL REFERENCE / CHECK SOURCE DATES BEFORE RELYING ON DATA</div><div class="foot-right">© ORIGINAL INTERFACE <span class="footer-sep">//</span> <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener noreferrer">MAP CREDIT ↗</a></div></footer>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <noscript><p class="no-script">This atlas requires JavaScript to load the bundled country data and interactive map.</p></noscript>
 </body>
 </html>

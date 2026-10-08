@@ -1,23 +1,23 @@
 #!/usr/bin/env python3
-"""Validate public JSON before it can be uploaded to GitHub Pages."""
-import json
+"""Sanity checks before publication. Requires Python standard library only."""
 from pathlib import Path
-from urllib.parse import urlparse
-
-FILE = Path(__file__).resolve().parents[1] / 'site' / 'data' / 'sections.json'
-content = json.loads(FILE.read_text(encoding='utf8'))
-assert len(content['sections']) == 6, 'Must have six sections'
-assert len(content['stats']) == 4, 'Must have four headline stats'
-assert all(x.get('title') and x.get('paragraphs') for x in content['sections'])
-assert len({s['id'] for s in content['sections']}) == len(content['sections'])
-assert content['sources'], 'Source reference library missing'
-for section in content['sections']:
-    for para in section['paragraphs']:
-        assert 20 <= len(para['text']) <= 1200, f"Suspicious paragraph in {section['id']}"
-        assert para['sources'], 'Paragraph missing citations'
-        for src in para['sources']:
-            assert src in content['sources'], f'Unknown source: {src}'
-for src in content['sources'].values():
-    parsed = urlparse(src['url'])
-    assert parsed.scheme == 'https' and parsed.netloc, 'Invalid source URL'
-print('PASS: six sections, four statistics, valid paragraph references and URLs')
+import json,sys
+root=Path(__file__).resolve().parents[1]
+countries=json.loads((root/'site/data/countries.json').read_text(encoding='utf8'))
+features=json.loads((root/'site/data/map.json').read_text(encoding='utf8'))
+assert isinstance(countries.get('countries'),dict) and len(countries['countries'])>=170,'missing country profiles'
+assert isinstance(features,list) and len(features)>=170,'missing geometry'
+codes={f['code'] for f in features}
+assert all(f.get('path','').startswith('M') for f in features),'missing map shapes'
+assert all(code in countries['countries'] for code in codes),'unmatched country codes'
+assert countries['countries']['YEM']['notes'].get('history'),'Yemen historical profile missing'
+assert sum(bool(c['notes']) for c in countries['countries'].values())>=20,'curated profiles missing'
+for code,c in countries['countries'].items():
+ assert c.get('name') and c.get('region') and c.get('references'),f'bad metadata {code}'
+ for r in c['references']:
+  assert r['url'].startswith('https://'),f'invalid outbound source {code}'
+ if c.get('population') is not None:
+  assert isinstance(c.get('population_year'),int) and c['population_year']<=2100,f'undated population {code}'
+for f in ('index.html','style.css','app.js','favicon.svg','.nojekyll'):
+ assert (root/'site'/f).exists(),f'missing site/{f}'
+print(f"VALID: {len(countries['countries'])} country dossiers; {len(features)} map regions; {sum(bool(c['notes']) for c in countries['countries'].values())} edited profiles; citations and dated stats checked.")

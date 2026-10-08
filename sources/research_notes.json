@@ -1,0 +1,145 @@
+{
+  "YEM": {
+    "overview": "Yemen occupies the southern end of the Arabian Peninsula, facing the Red Sea and the Gulf of Aden. Its historic cities, highland landscapes, and maritime connections distinguish it within the region.",
+    "history": "Ancient South Arabian kingdoms, including Saba, became important in regional trade. The modern Republic of Yemen emerged through the unification of North Yemen and South Yemen in 1990. Prolonged conflict has since reshaped national institutions and daily life.",
+    "geography": "Steep highlands rise above the western coastal plain, while more arid regions extend eastward. Yemen also includes Socotra and other islands, and it borders Saudi Arabia and Oman.",
+    "culture": "Yemen's architectural heritage includes the tower houses of Sana'a and the distinctive buildings of Shibam. Arabic is the official language, and regional traditions include distinctive music, food, crafts, and coffee culture.",
+    "caution": "Political institutions and territorial control are contested and change over time. Consult dated reporting before relying on claims about current authorities.",
+    "wiki_page": "Yemen",
+    "extra_sources": [{"label":"Archived CIA World Factbook","url":"https://the-world-factbook.org/the-world-factbook/countries/yemen/"},{"label":"UNESCO: Yemen","url":"https://whc.unesco.org/en/statesparties/ye/"}]
+  },
+  "USA": {
+    "overview": "The United States spans a large part of North America and includes Alaska and Hawaii. Its federal system and geographic scale contribute to substantial regional variation.",
+    "history": "The United States declared independence from Britain in 1776 and later expanded across North America. Its history includes slavery, civil war, industrial growth, and large movements for civil rights.",
+    "geography": "Landscapes range from Atlantic and Pacific coasts to the Great Plains, Rocky Mountains, deserts, and arctic environments in Alaska.",
+    "culture": "Cultural life reflects Indigenous communities and centuries of migration. Music, cinema, literature, food, and sports vary widely between regions.",
+    "wiki_page":"United States"
+  },
+  "CHN": {
+    "overview": "China is a large East Asian country with extensive regional diversity, major population centers, and long-standing commercial and cultural connections across Asia.",
+    "history": "Successive dynasties shaped imperial China over many centuries. The People's Republic of China was founded in 1949, following war and revolutionary change.",
+    "geography": "Western plateaus and mountains contrast with extensive eastern plains and river basins. The Yangtze and Yellow rivers are especially significant.",
+    "culture": "China's literary, philosophical, culinary, and artistic traditions have developed over millennia. Many languages and regional customs coexist within the country.",
+    "wiki_page":"China"
+  },
+  "RUS": {
+    "overview": "Russia extends across eastern Europe and northern Asia. It spans numerous time zones and contains a wide variety of landscapes and communities.",
+    "history": "Russia's history includes medieval principalities, the Russian Empire, the Soviet Union, and the Russian Federation formed after the Soviet dissolution in 1991.",
+    "geography": "The country stretches from the Baltic and Black Sea regions to the Pacific Ocean, with forests, tundra, steppe, and mountain ranges.",
+    "culture": "Literature, classical music, theatre, and visual arts play major roles in Russia's cultural history. Its many ethnic communities maintain distinct languages and traditions.",
+    "wiki_page":"Russia"
+  },
+  "BRA": {
+    "overview": "Brazil is South America's largest country by area, combining major urban regions with extensive tropical and subtropical landscapes.",
+    "history": "Indigenous societies inhabited the region long before Portuguese colonization. Brazil declared independence in 1822 and became a republic in 1889.",
+    "geography": "The Amazon basin covers much of the north, while highlands and long Atlantic coastlines shape other regions.",
+    "culture": "Portuguese is the official language. Brazilian traditions include samba, regional festivals, capoeira, literature, and diverse Indigenous and Afro-Brazilian influences.",
+    "wiki_page":"Brazil"
+  },
+  "IND": {
+    "overview": "India occupies much of the South Asian subcontinent and has an exceptionally diverse mix of languages, climates, and regional histories.",
+    "history": "The region has been home to major ancient civilizations and numerous empires. British colonial rule ended with independence and partition in 1947.",
+    "geography": "The Himalayan mountains border northern India; the Ganges plain, Deccan Plateau, and long peninsular coastline define other areas.",
+    "culture": "Many religious, linguistic, literary, and artistic traditions coexist. Food, architecture, dance, and festivals differ significantly by region.",
+    "wiki_page":"India"
+  },
+  "JPN": {
+    "overview": "Japan is an East Asian island country whose major cities are concentrated along coastal lowlands across several main islands.",
+    "history": "Japan's history includes long periods of imperial and shogunal rule, rapid modernization from the nineteenth century, and rebuilding after World War II.",
+    "geography": "Mountainous islands, volcanic ranges, forests, and an extensive coastline characterize Japan. Earthquakes and typhoons are important environmental hazards.",
+    "culture": "Traditional arts, literature, religious sites, cuisine, design, and contemporary popular media all contribute to Japan's cultural life.",
+    "wiki_page":"Japan"
+  },
+  "FRA": {
+    "overview": "France is a European country with Atlantic and Mediterranean coastlines and overseas territories in several regions of the world.",
+    "history": "France's history includes monarchy, revolution in 1789, empire, republics, and a major role in European political and cultural developments.",
+    "geography": "The Alps and Pyrenees frame parts of the country, while river valleys, plains, and distinct coastal regions shape its varied terrain.",
+    "culture": "French-language literature, cinema, visual arts, cuisine, and architecture have influential traditions, alongside strong regional identities.",
+    "wiki_page":"France"
+  },
+  "DEU": {
+    "overview": "Germany is a central European federal republic with major industrial centers and strong cultural and economic connections across the continent.",
+    "history": "German unification occurred in 1871; the twentieth century brought two world wars and division into East and West Germany. Reunification followed in 1990.",
+    "geography": "Northern lowlands extend toward the North and Baltic seas, with wooded uplands and the Alpine foothills farther south.",
+    "culture": "Germany is associated with influential traditions in philosophy, music, engineering, literature, and contemporary regional festivals.",
+    "wiki_page":"Germany"
+  },
+  "GBR": {
+    "overview": "The United Kingdom comprises England, Scotland, Wales, and Northern Ireland, with institutions and traditions shaped by their distinct histories.",
+    "history": "The modern UK developed through unions between kingdoms and became the center of a global empire. Its twentieth-century history includes world wars and decolonization.",
+    "geography": "The islands feature uplands, lowland plains, river valleys, and long coastlines influenced by the surrounding Atlantic Ocean.",
+    "culture": "English, Welsh, Scottish Gaelic, and other languages reflect varied heritage. Literature, music, theatre, and sport are prominent cultural fields.",
+    "wiki_page":"United Kingdom"
+  },
+  "CAN": {
+    "overview": "Canada extends across northern North America, from the Atlantic to the Pacific and Arctic oceans, and is home to numerous Indigenous nations.",
+    "history": "Indigenous peoples inhabited the land long before European settlement. Confederation began in 1867, with Canada's constitutional development continuing thereafter.",
+    "geography": "Boreal forests, the Canadian Shield, prairie provinces, mountain ranges, and Arctic landscapes form a very large and varied territory.",
+    "culture": "English and French are official languages. Indigenous traditions and immigration have shaped contemporary arts, food, and public life.",
+    "wiki_page":"Canada"
+  },
+  "MEX": {
+    "overview": "Mexico bridges North and Central America and combines major metropolitan regions with deserts, mountain ranges, and tropical coastlines.",
+    "history": "Civilizations including the Maya and Mexica developed before Spanish conquest. Independence was achieved in the nineteenth century, followed by major political change.",
+    "geography": "Two major mountain systems frame interior plateaus, while the Pacific Ocean, Gulf of Mexico, and Caribbean Sea border its coasts.",
+    "culture": "Indigenous languages and traditions coexist with widespread Spanish usage. Mexico is known for distinctive foodways, music, festivals, and arts.",
+    "wiki_page":"Mexico"
+  },
+  "EGY": {
+    "overview": "Egypt connects northeast Africa and the Sinai Peninsula. Population and settlement have long been closely associated with the Nile Valley.",
+    "history": "Ancient Egypt produced monumental architecture and one of the world's best-documented early civilizations. Later eras included Greek, Roman, Islamic, Ottoman, and modern states.",
+    "geography": "The Nile crosses arid landscapes before forming its fertile delta. Deserts, the Red Sea coast, and the Sinai Peninsula dominate much of its territory.",
+    "culture": "Egypt has an influential Arabic-language literary, musical, cinematic, and religious heritage alongside its renowned ancient monuments.",
+    "wiki_page":"Egypt"
+  },
+  "SAU": {
+    "overview": "Saudi Arabia occupies most of the Arabian Peninsula and contains the Islamic holy cities of Mecca and Medina.",
+    "history": "The modern Kingdom of Saudi Arabia was proclaimed in 1932 after a period of territorial consolidation. Oil later transformed its economy and infrastructure.",
+    "geography": "The country includes vast deserts, central plateaus, western mountains, and coastlines on the Red Sea and Persian Gulf.",
+    "culture": "Arabic is the official language. Religious heritage, oral poetry, traditional crafts, and diverse regional customs are important cultural features.",
+    "wiki_page":"Saudi Arabia"
+  },
+  "KEN": {
+    "overview": "Kenya lies along East Africa's Indian Ocean coast and includes diverse communities, cities, agricultural regions, and protected wildlife landscapes.",
+    "history": "Long-established African societies and Indian Ocean trade networks predate British colonial rule. Kenya gained independence in 1963.",
+    "geography": "The Great Rift Valley, central highlands, savannas, lakes, and coastal lowlands contribute to Kenya's varied ecology.",
+    "culture": "Swahili and English are official languages alongside many others used locally. Music, oral traditions, art, and cuisines vary across communities.",
+    "wiki_page":"Kenya"
+  },
+  "AUS": {
+    "overview": "Australia is a continent-sized country in the Southern Hemisphere. Its cities are primarily concentrated near the coast.",
+    "history": "Aboriginal and Torres Strait Islander peoples have continuous cultures stretching back tens of thousands of years. British colonization began in the late eighteenth century; federation followed in 1901.",
+    "geography": "Arid inland regions contrast with tropical north, temperate coasts, mountain ranges, and extensive reefs including the Great Barrier Reef.",
+    "culture": "Australia's cultural life reflects First Nations heritage, successive waves of migration, and strong traditions in literature, sport, film, and music.",
+    "wiki_page":"Australia"
+  },
+  "ZAF": {
+    "overview": "South Africa occupies the continent's southern end and has major coastal cities, inland plateaus, and a diverse population.",
+    "history": "The region has long Indigenous histories and was shaped by Dutch and British colonization. The apartheid system ended with democratic elections in 1994.",
+    "geography": "Its terrain includes the Great Escarpment, highveld, savannas, semi-arid regions, and coastlines on the Atlantic and Indian oceans.",
+    "culture": "South Africa recognizes multiple official languages and is known for rich traditions in music, literature, visual arts, and regional cuisines.",
+    "wiki_page":"South Africa"
+  },
+  "IDN": {
+    "overview": "Indonesia is a large Southeast Asian archipelago spanning thousands of islands between the Indian and Pacific oceans.",
+    "history": "Maritime trading kingdoms and later colonial rule shaped the islands. Indonesia declared independence in 1945 and achieved recognition after a prolonged struggle.",
+    "geography": "Volcanic islands, tropical forests, coral reefs, and active tectonic boundaries shape the country's landscapes and risks.",
+    "culture": "Hundreds of languages and regional traditions coexist. Batik, gamelan, dance, crafts, and local cuisines are notable forms of expression.",
+    "wiki_page":"Indonesia"
+  },
+  "TUR": {
+    "overview": "Türkiye occupies territory in both southeastern Europe and western Asia, connecting the Black Sea and Mediterranean regions.",
+    "history": "Anatolia was home to successive civilizations and empires, including the Byzantine and Ottoman empires. The Republic of Türkiye was founded in 1923.",
+    "geography": "The Anatolian Plateau, surrounding mountains, coastal plains, and strategic straits including the Bosporus define its landscape.",
+    "culture": "Architecture, literature, crafts, cuisine, and music reflect connections across Anatolia, the Balkans, the Caucasus, and the Middle East.",
+    "wiki_page":"Turkey"
+  },
+  "UKR": {
+    "overview": "Ukraine is a country in eastern Europe whose plains, cities, river systems, and Black Sea connections have influenced its development.",
+    "history": "Ukrainian history includes Kyivan Rus', Cossack traditions, imperial rule, and Soviet rule. Ukraine declared independence in 1991; Russia's full-scale invasion began in 2022.",
+    "geography": "Much of Ukraine is lowland steppe and agricultural plain, with the Carpathians to the west and the Dnipro River crossing the country.",
+    "culture": "Ukrainian-language literature, folk music, embroidery, cuisine, and visual arts form prominent parts of its cultural heritage.",
+    "caution":"This atlas does not provide live battle lines or territorial-control assessments. Consult current independent reporting.",
+    "wiki_page":"Ukraine"
+  }
+}

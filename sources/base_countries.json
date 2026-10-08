@@ -1,0 +1,3055 @@
+{
+  "AFG": {
+    "code": "AFG",
+    "name": "Afghanistan",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "capital": "Kabul",
+    "languages": [
+      "Pushto",
+      "Uzbek",
+      "Turkmen"
+    ],
+    "currency": "AFN",
+    "area_km2": 652230,
+    "alpha2": "AF",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "ALB": {
+    "code": "ALB",
+    "name": "Albania",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "capital": "Tirana",
+    "languages": [
+      "Albanian"
+    ],
+    "currency": "ALL",
+    "area_km2": 28748,
+    "alpha2": "AL",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "DZA": {
+    "code": "DZA",
+    "name": "Algeria",
+    "region": "Africa",
+    "subregion": "Northern Africa",
+    "capital": "Algiers",
+    "languages": [
+      "Arabic"
+    ],
+    "currency": "DZD",
+    "area_km2": 2381741,
+    "alpha2": "DZ",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "AGO": {
+    "code": "AGO",
+    "name": "Angola",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "capital": "Luanda",
+    "languages": [
+      "Portuguese"
+    ],
+    "currency": "AOA",
+    "area_km2": 1246700,
+    "alpha2": "AO",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "ATA": {
+    "code": "ATA",
+    "name": "Antarctica",
+    "region": "Antarctica",
+    "subregion": "",
+    "capital": null,
+    "languages": [],
+    "currency": "",
+    "area_km2": null,
+    "alpha2": "AQ",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "ARG": {
+    "code": "ARG",
+    "name": "Argentina",
+    "region": "South America",
+    "subregion": "South America",
+    "capital": "Buenos Aires",
+    "languages": [
+      "Spanish",
+      "Guarani"
+    ],
+    "currency": "ARS",
+    "area_km2": 2780400,
+    "alpha2": "AR",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "ARM": {
+    "code": "ARM",
+    "name": "Armenia",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "capital": "Yerevan",
+    "languages": [
+      "Armenian",
+      "Russian"
+    ],
+    "currency": "AMD",
+    "area_km2": 29743,
+    "alpha2": "AM",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "AUS": {
+    "code": "AUS",
+    "name": "Australia",
+    "region": "Oceania",
+    "subregion": "Australia and New Zealand",
+    "capital": "Canberra",
+    "languages": [
+      "English"
+    ],
+    "currency": "AUD",
+    "area_km2": 7692024,
+    "alpha2": "AU",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": true
+  },
+  "AUT": {
+    "code": "AUT",
+    "name": "Austria",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "capital": "Vienna",
+    "languages": [
+      "German"
+    ],
+    "currency": "EUR",
+    "area_km2": 83871,
+    "alpha2": "AT",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "AZE": {
+    "code": "AZE",
+    "name": "Azerbaijan",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "capital": "Baku",
+    "languages": [
+      "Azerbaijani",
+      "Armenian"
+    ],
+    "currency": "AZN",
+    "area_km2": 86600,
+    "alpha2": "AZ",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "BHS": {
+    "code": "BHS",
+    "name": "Bahamas",
+    "region": "North America",
+    "subregion": "",
+    "capital": null,
+    "languages": [],
+    "currency": "",
+    "area_km2": null,
+    "alpha2": "BS",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "BGD": {
+    "code": "BGD",
+    "name": "Bangladesh",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "capital": "Dhaka",
+    "languages": [
+      "Bengali"
+    ],
+    "currency": "BDT",
+    "area_km2": 147570,
+    "alpha2": "BD",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "BLR": {
+    "code": "BLR",
+    "name": "Belarus",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "capital": "Minsk",
+    "languages": [
+      "Belarusian",
+      "Russian"
+    ],
+    "currency": "BYR",
+    "area_km2": 207600,
+    "alpha2": "BY",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "BEL": {
+    "code": "BEL",
+    "name": "Belgium",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "capital": "Brussels",
+    "languages": [
+      "Dutch",
+      "French",
+      "German"
+    ],
+    "currency": "EUR",
+    "area_km2": 30528,
+    "alpha2": "BE",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "BLZ": {
+    "code": "BLZ",
+    "name": "Belize",
+    "region": "North America",
+    "subregion": "Central America",
+    "capital": "Belmopan",
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "currency": "BZD",
+    "area_km2": 22966,
+    "alpha2": "BZ",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "BEN": {
+    "code": "BEN",
+    "name": "Benin",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "capital": "Porto-Novo",
+    "languages": [
+      "French"
+    ],
+    "currency": "XOF",
+    "area_km2": 112622,
+    "alpha2": "BJ",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "BTN": {
+    "code": "BTN",
+    "name": "Bhutan",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "capital": "Thimphu",
+    "languages": [
+      "Dzongkha"
+    ],
+    "currency": "BTN, INR",
+    "area_km2": 38394,
+    "alpha2": "BT",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "BOL": {
+    "code": "BOL",
+    "name": "Bolivia",
+    "region": "South America",
+    "subregion": "South America",
+    "capital": "Sucre",
+    "languages": [
+      "Spanish",
+      "Aymara",
+      "Quechua"
+    ],
+    "currency": "BOB, BOV",
+    "area_km2": 1098581,
+    "alpha2": "BO",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "BIH": {
+    "code": "BIH",
+    "name": "Bosnia and Herzegovina",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "capital": "Sarajevo",
+    "languages": [
+      "Bosnian",
+      "Croatian",
+      "Serbian"
+    ],
+    "currency": "BAM",
+    "area_km2": 51209,
+    "alpha2": "BA",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "BWA": {
+    "code": "BWA",
+    "name": "Botswana",
+    "region": "Africa",
+    "subregion": "Southern Africa",
+    "capital": "Gaborone",
+    "languages": [
+      "English",
+      "Tswana"
+    ],
+    "currency": "BWP",
+    "area_km2": 582000,
+    "alpha2": "BW",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "BRA": {
+    "code": "BRA",
+    "name": "Brazil",
+    "region": "South America",
+    "subregion": "South America",
+    "capital": "Brasília",
+    "languages": [
+      "Portuguese"
+    ],
+    "currency": "BRL",
+    "area_km2": 8515767,
+    "alpha2": "BR",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": true
+  },
+  "BRN": {
+    "code": "BRN",
+    "name": "Brunei",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "capital": "Bandar Seri Begawan",
+    "languages": [
+      "Malay (macrolanguage)"
+    ],
+    "currency": "BND",
+    "area_km2": 5765,
+    "alpha2": "BN",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "BGR": {
+    "code": "BGR",
+    "name": "Bulgaria",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "capital": "Sofia",
+    "languages": [
+      "Bulgarian"
+    ],
+    "currency": "BGN",
+    "area_km2": 110879,
+    "alpha2": "BG",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "BFA": {
+    "code": "BFA",
+    "name": "Burkina Faso",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "capital": "Ouagadougou",
+    "languages": [
+      "French",
+      "Fulah"
+    ],
+    "currency": "XOF",
+    "area_km2": 272967,
+    "alpha2": "BF",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "BDI": {
+    "code": "BDI",
+    "name": "Burundi",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "capital": "Bujumbura",
+    "languages": [
+      "French",
+      "Rundi"
+    ],
+    "currency": "BIF",
+    "area_km2": 27834,
+    "alpha2": "BI",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "KHM": {
+    "code": "KHM",
+    "name": "Cambodia",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "capital": "Phnom Penh",
+    "languages": [
+      "Khmer"
+    ],
+    "currency": "KHR",
+    "area_km2": 181035,
+    "alpha2": "KH",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "CMR": {
+    "code": "CMR",
+    "name": "Cameroon",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "capital": "Yaoundé",
+    "languages": [
+      "English",
+      "French"
+    ],
+    "currency": "XAF",
+    "area_km2": 475442,
+    "alpha2": "CM",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "CAN": {
+    "code": "CAN",
+    "name": "Canada",
+    "region": "North America",
+    "subregion": "Northern America",
+    "capital": "Ottawa",
+    "languages": [
+      "English",
+      "French"
+    ],
+    "currency": "CAD",
+    "area_km2": 9984670,
+    "alpha2": "CA",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": true
+  },
+  "CAF": {
+    "code": "CAF",
+    "name": "Central African Republic",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "capital": "Bangui",
+    "languages": [
+      "French",
+      "Sango"
+    ],
+    "currency": "XAF",
+    "area_km2": 622984,
+    "alpha2": "CF",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "TCD": {
+    "code": "TCD",
+    "name": "Chad",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "capital": "N'Djamena",
+    "languages": [
+      "French",
+      "Arabic"
+    ],
+    "currency": "XAF",
+    "area_km2": 1284000,
+    "alpha2": "TD",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "CHL": {
+    "code": "CHL",
+    "name": "Chile",
+    "region": "South America",
+    "subregion": "South America",
+    "capital": "Santiago",
+    "languages": [
+      "Spanish"
+    ],
+    "currency": "CLF, CLP",
+    "area_km2": 756102,
+    "alpha2": "CL",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "CHN": {
+    "code": "CHN",
+    "name": "China",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "capital": "Beijing",
+    "languages": [
+      "Chinese"
+    ],
+    "currency": "CNY",
+    "area_km2": 9640011,
+    "alpha2": "CN",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": true
+  },
+  "COL": {
+    "code": "COL",
+    "name": "Colombia",
+    "region": "South America",
+    "subregion": "South America",
+    "capital": "Bogotá",
+    "languages": [
+      "Spanish"
+    ],
+    "currency": "COP",
+    "area_km2": 1141748,
+    "alpha2": "CO",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "COG": {
+    "code": "COG",
+    "name": "Congo",
+    "region": "Africa",
+    "subregion": "",
+    "capital": null,
+    "languages": [],
+    "currency": "",
+    "area_km2": null,
+    "alpha2": "CG",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "CRI": {
+    "code": "CRI",
+    "name": "Costa Rica",
+    "region": "North America",
+    "subregion": "Central America",
+    "capital": "San José",
+    "languages": [
+      "Spanish"
+    ],
+    "currency": "CRC",
+    "area_km2": 51100,
+    "alpha2": "CR",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "HRV": {
+    "code": "HRV",
+    "name": "Croatia",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "capital": "Zagreb",
+    "languages": [
+      "Croatian"
+    ],
+    "currency": "HRK",
+    "area_km2": 56594,
+    "alpha2": "HR",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "CUB": {
+    "code": "CUB",
+    "name": "Cuba",
+    "region": "North America",
+    "subregion": "Caribbean",
+    "capital": "Havana",
+    "languages": [
+      "Spanish"
+    ],
+    "currency": "CUC, CUP",
+    "area_km2": 109884,
+    "alpha2": "CU",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "CYP": {
+    "code": "CYP",
+    "name": "Cyprus",
+    "region": "Asia",
+    "subregion": "Southern Europe",
+    "capital": "Nicosia",
+    "languages": [
+      "Modern Greek (1453-)",
+      "Turkish",
+      "Armenian"
+    ],
+    "currency": "EUR",
+    "area_km2": 9251,
+    "alpha2": "CY",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "CZE": {
+    "code": "CZE",
+    "name": "Czech Republic",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "capital": "Prague",
+    "languages": [
+      "Czech",
+      "Slovak"
+    ],
+    "currency": "CZK",
+    "area_km2": 78865,
+    "alpha2": "CZ",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "CIV": {
+    "code": "CIV",
+    "name": "Côte d'Ivoire",
+    "region": "Africa",
+    "subregion": "",
+    "capital": null,
+    "languages": [],
+    "currency": "",
+    "area_km2": null,
+    "alpha2": "CI",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "DNK": {
+    "code": "DNK",
+    "name": "Denmark",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "capital": "Copenhagen",
+    "languages": [
+      "Danish"
+    ],
+    "currency": "DKK",
+    "area_km2": 43094,
+    "alpha2": "DK",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "DJI": {
+    "code": "DJI",
+    "name": "Djibouti",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "capital": "Djibouti",
+    "languages": [
+      "French",
+      "Arabic"
+    ],
+    "currency": "DJF",
+    "area_km2": 23200,
+    "alpha2": "DJ",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "DOM": {
+    "code": "DOM",
+    "name": "Dominican Republic",
+    "region": "North America",
+    "subregion": "Caribbean",
+    "capital": "Santo Domingo",
+    "languages": [
+      "Spanish"
+    ],
+    "currency": "DOP",
+    "area_km2": 48671,
+    "alpha2": "DO",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "COD": {
+    "code": "COD",
+    "name": "DR Congo",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "capital": "Kinshasa",
+    "languages": [
+      "French",
+      "Lingala",
+      "Kongo",
+      "Swahili (macrolanguage)",
+      "Luba-Katanga"
+    ],
+    "currency": "CDF",
+    "area_km2": 2344858,
+    "alpha2": "CD",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "ECU": {
+    "code": "ECU",
+    "name": "Ecuador",
+    "region": "South America",
+    "subregion": "South America",
+    "capital": "Quito",
+    "languages": [
+      "Spanish"
+    ],
+    "currency": "USD",
+    "area_km2": 276841,
+    "alpha2": "EC",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "EGY": {
+    "code": "EGY",
+    "name": "Egypt",
+    "region": "Africa",
+    "subregion": "Northern Africa",
+    "capital": "Cairo",
+    "languages": [
+      "Arabic"
+    ],
+    "currency": "EGP",
+    "area_km2": 1002450,
+    "alpha2": "EG",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": true
+  },
+  "SLV": {
+    "code": "SLV",
+    "name": "El Salvador",
+    "region": "North America",
+    "subregion": "Central America",
+    "capital": "San Salvador",
+    "languages": [
+      "Spanish"
+    ],
+    "currency": "SVC, USD",
+    "area_km2": 21041,
+    "alpha2": "SV",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "GNQ": {
+    "code": "GNQ",
+    "name": "Equatorial Guinea",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "capital": "Malabo",
+    "languages": [
+      "Spanish",
+      "French"
+    ],
+    "currency": "XAF",
+    "area_km2": 28051,
+    "alpha2": "GQ",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "ERI": {
+    "code": "ERI",
+    "name": "Eritrea",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "capital": "Asmara",
+    "languages": [
+      "Tigrinya",
+      "Arabic",
+      "English"
+    ],
+    "currency": "ERN",
+    "area_km2": 117600,
+    "alpha2": "ER",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "EST": {
+    "code": "EST",
+    "name": "Estonia",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "capital": "Tallinn",
+    "languages": [
+      "Estonian"
+    ],
+    "currency": "EUR",
+    "area_km2": 45227,
+    "alpha2": "EE",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "SWZ": {
+    "code": "SWZ",
+    "name": "Eswatini",
+    "region": "Africa",
+    "subregion": "",
+    "capital": null,
+    "languages": [],
+    "currency": "",
+    "area_km2": null,
+    "alpha2": "SZ",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "ETH": {
+    "code": "ETH",
+    "name": "Ethiopia",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "capital": "Addis Ababa",
+    "languages": [
+      "Amharic"
+    ],
+    "currency": "ETB",
+    "area_km2": 1104300,
+    "alpha2": "ET",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "FLK": {
+    "code": "FLK",
+    "name": "Falkland Islands / Islas Malvinas",
+    "region": "South America",
+    "subregion": "South America",
+    "capital": "Stanley",
+    "languages": [
+      "English"
+    ],
+    "currency": "FKP",
+    "area_km2": 12173,
+    "alpha2": "FK",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "FJI": {
+    "code": "FJI",
+    "name": "Fiji",
+    "region": "Oceania",
+    "subregion": "Melanesia",
+    "capital": "Suva",
+    "languages": [
+      "English",
+      "Fijian",
+      "Hindi",
+      "Urdu"
+    ],
+    "currency": "FJD",
+    "area_km2": 18272,
+    "alpha2": "FJ",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "FIN": {
+    "code": "FIN",
+    "name": "Finland",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "capital": "Helsinki",
+    "languages": [
+      "Finnish",
+      "Swedish"
+    ],
+    "currency": "EUR",
+    "area_km2": 338424,
+    "alpha2": "FI",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "ATF": {
+    "code": "ATF",
+    "name": "Fr. S. Antarctic Lands",
+    "region": "Seven seas (open ocean)",
+    "subregion": "",
+    "capital": null,
+    "languages": [],
+    "currency": "",
+    "area_km2": null,
+    "alpha2": "TF",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "FRA": {
+    "code": "FRA",
+    "name": "France",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "capital": "Paris",
+    "languages": [
+      "French"
+    ],
+    "currency": "EUR",
+    "area_km2": 640679,
+    "alpha2": "FR",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": true
+  },
+  "GAB": {
+    "code": "GAB",
+    "name": "Gabon",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "capital": "Libreville",
+    "languages": [
+      "French"
+    ],
+    "currency": "XAF",
+    "area_km2": 267668,
+    "alpha2": "GA",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "GMB": {
+    "code": "GMB",
+    "name": "Gambia",
+    "region": "Africa",
+    "subregion": "",
+    "capital": null,
+    "languages": [],
+    "currency": "",
+    "area_km2": null,
+    "alpha2": "GM",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "GEO": {
+    "code": "GEO",
+    "name": "Georgia",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "capital": "Tbilisi",
+    "languages": [
+      "Georgian"
+    ],
+    "currency": "GEL",
+    "area_km2": 69700,
+    "alpha2": "GE",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "DEU": {
+    "code": "DEU",
+    "name": "Germany",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "capital": "Berlin",
+    "languages": [
+      "German"
+    ],
+    "currency": "EUR",
+    "area_km2": 357114,
+    "alpha2": "DE",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": true
+  },
+  "GHA": {
+    "code": "GHA",
+    "name": "Ghana",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "capital": "Accra",
+    "languages": [
+      "English"
+    ],
+    "currency": "GHS",
+    "area_km2": 238533,
+    "alpha2": "GH",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "GRC": {
+    "code": "GRC",
+    "name": "Greece",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "capital": "Athens",
+    "languages": [
+      "Modern Greek (1453-)"
+    ],
+    "currency": "EUR",
+    "area_km2": 131990,
+    "alpha2": "GR",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "GRL": {
+    "code": "GRL",
+    "name": "Greenland",
+    "region": "North America",
+    "subregion": "Northern America",
+    "capital": "Nuuk",
+    "languages": [
+      "Kalaallisut"
+    ],
+    "currency": "DKK",
+    "area_km2": 2166086,
+    "alpha2": "GL",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "GTM": {
+    "code": "GTM",
+    "name": "Guatemala",
+    "region": "North America",
+    "subregion": "Central America",
+    "capital": "Guatemala City",
+    "languages": [
+      "Spanish"
+    ],
+    "currency": "GTQ",
+    "area_km2": 108889,
+    "alpha2": "GT",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "GIN": {
+    "code": "GIN",
+    "name": "Guinea",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "capital": "Conakry",
+    "languages": [
+      "French",
+      "Fulah"
+    ],
+    "currency": "GNF",
+    "area_km2": 245857,
+    "alpha2": "GN",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "GNB": {
+    "code": "GNB",
+    "name": "Guinea-Bissau",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "capital": "Bissau",
+    "languages": [
+      "Portuguese"
+    ],
+    "currency": "XOF",
+    "area_km2": 36125,
+    "alpha2": "GW",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "GUY": {
+    "code": "GUY",
+    "name": "Guyana",
+    "region": "South America",
+    "subregion": "South America",
+    "capital": "Georgetown",
+    "languages": [
+      "English"
+    ],
+    "currency": "GYD",
+    "area_km2": 214969,
+    "alpha2": "GY",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "HTI": {
+    "code": "HTI",
+    "name": "Haiti",
+    "region": "North America",
+    "subregion": "Caribbean",
+    "capital": "Port-au-Prince",
+    "languages": [
+      "French",
+      "Haitian"
+    ],
+    "currency": "HTG, USD",
+    "area_km2": 27750,
+    "alpha2": "HT",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "HND": {
+    "code": "HND",
+    "name": "Honduras",
+    "region": "North America",
+    "subregion": "Central America",
+    "capital": "Tegucigalpa",
+    "languages": [
+      "Spanish"
+    ],
+    "currency": "HNL",
+    "area_km2": 112492,
+    "alpha2": "HN",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "HUN": {
+    "code": "HUN",
+    "name": "Hungary",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "capital": "Budapest",
+    "languages": [
+      "Hungarian"
+    ],
+    "currency": "HUF",
+    "area_km2": 93028,
+    "alpha2": "HU",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "ISL": {
+    "code": "ISL",
+    "name": "Iceland",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "capital": "Reykjavik",
+    "languages": [
+      "Icelandic"
+    ],
+    "currency": "ISK",
+    "area_km2": 103000,
+    "alpha2": "IS",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "IND": {
+    "code": "IND",
+    "name": "India",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "capital": "New Delhi",
+    "languages": [
+      "Hindi",
+      "English"
+    ],
+    "currency": "INR",
+    "area_km2": 3287590,
+    "alpha2": "IN",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": true
+  },
+  "IDN": {
+    "code": "IDN",
+    "name": "Indonesia",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "capital": "Jakarta",
+    "languages": [
+      "Indonesian"
+    ],
+    "currency": "IDR",
+    "area_km2": 1904569,
+    "alpha2": "ID",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": true
+  },
+  "IRN": {
+    "code": "IRN",
+    "name": "Iran",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "capital": "Tehran",
+    "languages": [
+      "Persian"
+    ],
+    "currency": "IRR",
+    "area_km2": 1648195,
+    "alpha2": "IR",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "IRQ": {
+    "code": "IRQ",
+    "name": "Iraq",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "capital": "Baghdad",
+    "languages": [
+      "Arabic",
+      "Kurdish"
+    ],
+    "currency": "IQD",
+    "area_km2": 438317,
+    "alpha2": "IQ",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "IRL": {
+    "code": "IRL",
+    "name": "Ireland",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "capital": "Dublin",
+    "languages": [
+      "Irish",
+      "English"
+    ],
+    "currency": "EUR",
+    "area_km2": 70273,
+    "alpha2": "IE",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "ISR": {
+    "code": "ISR",
+    "name": "Israel",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "capital": "Jerusalem",
+    "languages": [
+      "Hebrew",
+      "Arabic"
+    ],
+    "currency": "ILS",
+    "area_km2": 20770,
+    "alpha2": "IL",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "ITA": {
+    "code": "ITA",
+    "name": "Italy",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "capital": "Rome",
+    "languages": [
+      "Italian"
+    ],
+    "currency": "EUR",
+    "area_km2": 301336,
+    "alpha2": "IT",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "JAM": {
+    "code": "JAM",
+    "name": "Jamaica",
+    "region": "North America",
+    "subregion": "Caribbean",
+    "capital": "Kingston",
+    "languages": [
+      "English"
+    ],
+    "currency": "JMD",
+    "area_km2": 10991,
+    "alpha2": "JM",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "JPN": {
+    "code": "JPN",
+    "name": "Japan",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "capital": "Tokyo",
+    "languages": [
+      "Japanese"
+    ],
+    "currency": "JPY",
+    "area_km2": 377930,
+    "alpha2": "JP",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": true
+  },
+  "JOR": {
+    "code": "JOR",
+    "name": "Jordan",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "capital": "Amman",
+    "languages": [
+      "Arabic"
+    ],
+    "currency": "JOD",
+    "area_km2": 89342,
+    "alpha2": "JO",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "KAZ": {
+    "code": "KAZ",
+    "name": "Kazakhstan",
+    "region": "Asia",
+    "subregion": "Central Asia",
+    "capital": "Astana",
+    "languages": [
+      "Kazakh",
+      "Russian"
+    ],
+    "currency": "KZT",
+    "area_km2": 2724900,
+    "alpha2": "KZ",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "KEN": {
+    "code": "KEN",
+    "name": "Kenya",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "capital": "Nairobi",
+    "languages": [
+      "English",
+      "Swahili (macrolanguage)"
+    ],
+    "currency": "KES",
+    "area_km2": 580367,
+    "alpha2": "KE",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": true
+  },
+  "XKX": {
+    "code": "XKX",
+    "name": "Kosovo (disputed)",
+    "region": "Europe",
+    "subregion": "",
+    "capital": null,
+    "languages": [],
+    "currency": "",
+    "area_km2": null,
+    "alpha2": "XK",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "KWT": {
+    "code": "KWT",
+    "name": "Kuwait",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "capital": "Kuwait City",
+    "languages": [
+      "Arabic"
+    ],
+    "currency": "KWD",
+    "area_km2": 17818,
+    "alpha2": "KW",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "KGZ": {
+    "code": "KGZ",
+    "name": "Kyrgyzstan",
+    "region": "Asia",
+    "subregion": "Central Asia",
+    "capital": "Bishkek",
+    "languages": [
+      "Kirghiz",
+      "Russian"
+    ],
+    "currency": "KGS",
+    "area_km2": 199951,
+    "alpha2": "KG",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "LAO": {
+    "code": "LAO",
+    "name": "Laos",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "capital": "Vientiane",
+    "languages": [
+      "Lao"
+    ],
+    "currency": "LAK",
+    "area_km2": 236800,
+    "alpha2": "LA",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "LVA": {
+    "code": "LVA",
+    "name": "Latvia",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "capital": "Riga",
+    "languages": [
+      "Latvian"
+    ],
+    "currency": "EUR",
+    "area_km2": 64559,
+    "alpha2": "LV",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "LBN": {
+    "code": "LBN",
+    "name": "Lebanon",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "capital": "Beirut",
+    "languages": [
+      "Arabic",
+      "French"
+    ],
+    "currency": "LBP",
+    "area_km2": 10452,
+    "alpha2": "LB",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "LSO": {
+    "code": "LSO",
+    "name": "Lesotho",
+    "region": "Africa",
+    "subregion": "Southern Africa",
+    "capital": "Maseru",
+    "languages": [
+      "English",
+      "Southern Sotho"
+    ],
+    "currency": "LSL, ZAR",
+    "area_km2": 30355,
+    "alpha2": "LS",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "LBR": {
+    "code": "LBR",
+    "name": "Liberia",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "capital": "Monrovia",
+    "languages": [
+      "English"
+    ],
+    "currency": "LRD",
+    "area_km2": 111369,
+    "alpha2": "LR",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "LBY": {
+    "code": "LBY",
+    "name": "Libya",
+    "region": "Africa",
+    "subregion": "Northern Africa",
+    "capital": "Tripoli",
+    "languages": [
+      "Arabic"
+    ],
+    "currency": "LYD",
+    "area_km2": 1759540,
+    "alpha2": "LY",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "LTU": {
+    "code": "LTU",
+    "name": "Lithuania",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "capital": "Vilnius",
+    "languages": [
+      "Lithuanian"
+    ],
+    "currency": "EUR",
+    "area_km2": 65300,
+    "alpha2": "LT",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "LUX": {
+    "code": "LUX",
+    "name": "Luxembourg",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "capital": "Luxembourg",
+    "languages": [
+      "French",
+      "German",
+      "Luxembourgish"
+    ],
+    "currency": "EUR",
+    "area_km2": 2586,
+    "alpha2": "LU",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "MKD": {
+    "code": "MKD",
+    "name": "Macedonia",
+    "region": "Europe",
+    "subregion": "",
+    "capital": null,
+    "languages": [],
+    "currency": "",
+    "area_km2": null,
+    "alpha2": "MK",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "MDG": {
+    "code": "MDG",
+    "name": "Madagascar",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "capital": "Antananarivo",
+    "languages": [
+      "French",
+      "Malagasy"
+    ],
+    "currency": "MGA",
+    "area_km2": 587041,
+    "alpha2": "MG",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "MWI": {
+    "code": "MWI",
+    "name": "Malawi",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "capital": "Lilongwe",
+    "languages": [
+      "English",
+      "Nyanja"
+    ],
+    "currency": "MWK",
+    "area_km2": 118484,
+    "alpha2": "MW",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "MYS": {
+    "code": "MYS",
+    "name": "Malaysia",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "capital": "Kuala Lumpur",
+    "languages": [],
+    "currency": "MYR",
+    "area_km2": 330803,
+    "alpha2": "MY",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "MLI": {
+    "code": "MLI",
+    "name": "Mali",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "capital": "Bamako",
+    "languages": [
+      "French"
+    ],
+    "currency": "XOF",
+    "area_km2": 1240192,
+    "alpha2": "ML",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "MRT": {
+    "code": "MRT",
+    "name": "Mauritania",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "capital": "Nouakchott",
+    "languages": [
+      "Arabic"
+    ],
+    "currency": "MRO",
+    "area_km2": 1030700,
+    "alpha2": "MR",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "MEX": {
+    "code": "MEX",
+    "name": "Mexico",
+    "region": "North America",
+    "subregion": "Central America",
+    "capital": "Mexico City",
+    "languages": [
+      "Spanish"
+    ],
+    "currency": "MXN",
+    "area_km2": 1964375,
+    "alpha2": "MX",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": true
+  },
+  "MDA": {
+    "code": "MDA",
+    "name": "Moldova",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "capital": "Chișinău",
+    "languages": [
+      "Romanian"
+    ],
+    "currency": "MDL",
+    "area_km2": 33846,
+    "alpha2": "MD",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "MNG": {
+    "code": "MNG",
+    "name": "Mongolia",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "capital": "Ulan Bator",
+    "languages": [
+      "Mongolian"
+    ],
+    "currency": "MNT",
+    "area_km2": 1564110,
+    "alpha2": "MN",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "MNE": {
+    "code": "MNE",
+    "name": "Montenegro",
+    "region": "Europe",
+    "subregion": "",
+    "capital": null,
+    "languages": [],
+    "currency": "",
+    "area_km2": null,
+    "alpha2": "ME",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "MAR": {
+    "code": "MAR",
+    "name": "Morocco",
+    "region": "Africa",
+    "subregion": "Northern Africa",
+    "capital": "Rabat",
+    "languages": [
+      "Arabic"
+    ],
+    "currency": "MAD",
+    "area_km2": 446550,
+    "alpha2": "MA",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "MOZ": {
+    "code": "MOZ",
+    "name": "Mozambique",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "capital": "Maputo",
+    "languages": [
+      "Portuguese"
+    ],
+    "currency": "MZN",
+    "area_km2": 801590,
+    "alpha2": "MZ",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "MMR": {
+    "code": "MMR",
+    "name": "Myanmar",
+    "region": "Asia",
+    "subregion": "",
+    "capital": null,
+    "languages": [],
+    "currency": "",
+    "area_km2": null,
+    "alpha2": "MM",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "NAM": {
+    "code": "NAM",
+    "name": "Namibia",
+    "region": "Africa",
+    "subregion": "Southern Africa",
+    "capital": "Windhoek",
+    "languages": [
+      "English",
+      "Afrikaans"
+    ],
+    "currency": "NAD, ZAR",
+    "area_km2": 825615,
+    "alpha2": "NA",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "NPL": {
+    "code": "NPL",
+    "name": "Nepal",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "capital": "Kathmandu",
+    "languages": [
+      "Nepali (macrolanguage)"
+    ],
+    "currency": "NPR",
+    "area_km2": 147181,
+    "alpha2": "NP",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "NLD": {
+    "code": "NLD",
+    "name": "Netherlands",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "capital": "Amsterdam",
+    "languages": [
+      "Dutch"
+    ],
+    "currency": "EUR",
+    "area_km2": 41850,
+    "alpha2": "NL",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "NCL": {
+    "code": "NCL",
+    "name": "New Caledonia",
+    "region": "Oceania",
+    "subregion": "Melanesia",
+    "capital": "Nouméa",
+    "languages": [
+      "French"
+    ],
+    "currency": "XPF",
+    "area_km2": 18575,
+    "alpha2": "NC",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "NZL": {
+    "code": "NZL",
+    "name": "New Zealand",
+    "region": "Oceania",
+    "subregion": "Australia and New Zealand",
+    "capital": "Wellington",
+    "languages": [
+      "English",
+      "Maori"
+    ],
+    "currency": "NZD",
+    "area_km2": 270467,
+    "alpha2": "NZ",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "NIC": {
+    "code": "NIC",
+    "name": "Nicaragua",
+    "region": "North America",
+    "subregion": "Central America",
+    "capital": "Managua",
+    "languages": [
+      "Spanish"
+    ],
+    "currency": "NIO",
+    "area_km2": 130373,
+    "alpha2": "NI",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "NER": {
+    "code": "NER",
+    "name": "Niger",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "capital": "Niamey",
+    "languages": [
+      "French"
+    ],
+    "currency": "XOF",
+    "area_km2": 1267000,
+    "alpha2": "NE",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "NGA": {
+    "code": "NGA",
+    "name": "Nigeria",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "capital": "Abuja",
+    "languages": [
+      "English"
+    ],
+    "currency": "NGN",
+    "area_km2": 923768,
+    "alpha2": "NG",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "PRK": {
+    "code": "PRK",
+    "name": "North Korea",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "capital": "Pyongyang",
+    "languages": [
+      "Korean"
+    ],
+    "currency": "KPW",
+    "area_km2": 120538,
+    "alpha2": "KP",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "XNC": {
+    "code": "XNC",
+    "name": "Northern Cyprus (disputed)",
+    "region": "Asia",
+    "subregion": "",
+    "capital": null,
+    "languages": [],
+    "currency": "",
+    "area_km2": null,
+    "alpha2": "",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "NOR": {
+    "code": "NOR",
+    "name": "Norway",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "capital": "Oslo",
+    "languages": [
+      "Norwegian",
+      "Norwegian Bokmål",
+      "Norwegian Nynorsk"
+    ],
+    "currency": "NOK",
+    "area_km2": 323802,
+    "alpha2": "NO",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "OMN": {
+    "code": "OMN",
+    "name": "Oman",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "capital": "Muscat",
+    "languages": [
+      "Arabic"
+    ],
+    "currency": "OMR",
+    "area_km2": 309500,
+    "alpha2": "OM",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "PAK": {
+    "code": "PAK",
+    "name": "Pakistan",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "capital": "Islamabad",
+    "languages": [
+      "English",
+      "Urdu"
+    ],
+    "currency": "PKR",
+    "area_km2": 881912,
+    "alpha2": "PK",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "PSE": {
+    "code": "PSE",
+    "name": "Palestine",
+    "region": "Asia",
+    "subregion": "",
+    "capital": null,
+    "languages": [],
+    "currency": "",
+    "area_km2": null,
+    "alpha2": "PS",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "PAN": {
+    "code": "PAN",
+    "name": "Panama",
+    "region": "North America",
+    "subregion": "Central America",
+    "capital": "Panama City",
+    "languages": [
+      "Spanish"
+    ],
+    "currency": "PAB, USD",
+    "area_km2": 75417,
+    "alpha2": "PA",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "PNG": {
+    "code": "PNG",
+    "name": "Papua New Guinea",
+    "region": "Oceania",
+    "subregion": "Melanesia",
+    "capital": "Port Moresby",
+    "languages": [
+      "English"
+    ],
+    "currency": "PGK",
+    "area_km2": 462840,
+    "alpha2": "PG",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "PRY": {
+    "code": "PRY",
+    "name": "Paraguay",
+    "region": "South America",
+    "subregion": "South America",
+    "capital": "Asunción",
+    "languages": [
+      "Spanish",
+      "Guarani"
+    ],
+    "currency": "PYG",
+    "area_km2": 406752,
+    "alpha2": "PY",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "PER": {
+    "code": "PER",
+    "name": "Peru",
+    "region": "South America",
+    "subregion": "South America",
+    "capital": "Lima",
+    "languages": [
+      "Spanish"
+    ],
+    "currency": "PEN",
+    "area_km2": 1285216,
+    "alpha2": "PE",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "PHL": {
+    "code": "PHL",
+    "name": "Philippines",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "capital": "Manila",
+    "languages": [
+      "English"
+    ],
+    "currency": "PHP",
+    "area_km2": 342353,
+    "alpha2": "PH",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "POL": {
+    "code": "POL",
+    "name": "Poland",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "capital": "Warsaw",
+    "languages": [
+      "Polish"
+    ],
+    "currency": "PLN",
+    "area_km2": 312679,
+    "alpha2": "PL",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "PRT": {
+    "code": "PRT",
+    "name": "Portugal",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "capital": "Lisbon",
+    "languages": [
+      "Portuguese"
+    ],
+    "currency": "EUR",
+    "area_km2": 92090,
+    "alpha2": "PT",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "PRI": {
+    "code": "PRI",
+    "name": "Puerto Rico",
+    "region": "North America",
+    "subregion": "Caribbean",
+    "capital": "San Juan",
+    "languages": [
+      "Spanish",
+      "English"
+    ],
+    "currency": "USD",
+    "area_km2": 8870,
+    "alpha2": "PR",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "QAT": {
+    "code": "QAT",
+    "name": "Qatar",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "capital": "Doha",
+    "languages": [
+      "Arabic"
+    ],
+    "currency": "QAR",
+    "area_km2": 11586,
+    "alpha2": "QA",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "ROU": {
+    "code": "ROU",
+    "name": "Romania",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "capital": "Bucharest",
+    "languages": [
+      "Romanian"
+    ],
+    "currency": "RON",
+    "area_km2": 238391,
+    "alpha2": "RO",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "RUS": {
+    "code": "RUS",
+    "name": "Russia",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "capital": "Moscow",
+    "languages": [
+      "Russian"
+    ],
+    "currency": "RUB",
+    "area_km2": 17124442,
+    "alpha2": "RU",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": true
+  },
+  "RWA": {
+    "code": "RWA",
+    "name": "Rwanda",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "capital": "Kigali",
+    "languages": [
+      "Kinyarwanda",
+      "English",
+      "French"
+    ],
+    "currency": "RWF",
+    "area_km2": 26338,
+    "alpha2": "RW",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "SAU": {
+    "code": "SAU",
+    "name": "Saudi Arabia",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "capital": "Riyadh",
+    "languages": [
+      "Arabic"
+    ],
+    "currency": "SAR",
+    "area_km2": 2149690,
+    "alpha2": "SA",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": true
+  },
+  "SEN": {
+    "code": "SEN",
+    "name": "Senegal",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "capital": "Dakar",
+    "languages": [
+      "French"
+    ],
+    "currency": "XOF",
+    "area_km2": 196722,
+    "alpha2": "SN",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "SRB": {
+    "code": "SRB",
+    "name": "Serbia",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "capital": "Belgrade",
+    "languages": [
+      "RS"
+    ],
+    "currency": "RSD",
+    "area_km2": 49037,
+    "alpha2": "RS",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "SLE": {
+    "code": "SLE",
+    "name": "Sierra Leone",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "capital": "Freetown",
+    "languages": [
+      "English"
+    ],
+    "currency": "SLL",
+    "area_km2": 71740,
+    "alpha2": "SL",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "SVK": {
+    "code": "SVK",
+    "name": "Slovakia",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "capital": "Bratislava",
+    "languages": [
+      "Slovak"
+    ],
+    "currency": "EUR",
+    "area_km2": 49037,
+    "alpha2": "SK",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "SVN": {
+    "code": "SVN",
+    "name": "Slovenia",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "capital": "Ljubljana",
+    "languages": [
+      "Slovenian"
+    ],
+    "currency": "EUR",
+    "area_km2": 20273,
+    "alpha2": "SI",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "SLB": {
+    "code": "SLB",
+    "name": "Solomon Is.",
+    "region": "Oceania",
+    "subregion": "",
+    "capital": null,
+    "languages": [],
+    "currency": "",
+    "area_km2": null,
+    "alpha2": "SB",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "SOM": {
+    "code": "SOM",
+    "name": "Somalia",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "capital": "Mogadishu",
+    "languages": [
+      "Somali",
+      "Arabic"
+    ],
+    "currency": "SOS",
+    "area_km2": 637657,
+    "alpha2": "SO",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "XSO": {
+    "code": "XSO",
+    "name": "Somaliland (disputed)",
+    "region": "Africa",
+    "subregion": "",
+    "capital": null,
+    "languages": [],
+    "currency": "",
+    "area_km2": null,
+    "alpha2": "",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "ZAF": {
+    "code": "ZAF",
+    "name": "South Africa",
+    "region": "Africa",
+    "subregion": "Southern Africa",
+    "capital": "Pretoria",
+    "languages": [
+      "Afrikaans",
+      "English",
+      "South Ndebele",
+      "Southern Sotho",
+      "Swati"
+    ],
+    "currency": "ZAR",
+    "area_km2": 1221037,
+    "alpha2": "ZA",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": true
+  },
+  "KOR": {
+    "code": "KOR",
+    "name": "South Korea",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "capital": "Seoul",
+    "languages": [
+      "Korean"
+    ],
+    "currency": "KRW",
+    "area_km2": 100210,
+    "alpha2": "KR",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "SSD": {
+    "code": "SSD",
+    "name": "South Sudan",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "capital": "Juba",
+    "languages": [
+      "English"
+    ],
+    "currency": "SSP",
+    "area_km2": 619745,
+    "alpha2": "SS",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "ESP": {
+    "code": "ESP",
+    "name": "Spain",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "capital": "Madrid",
+    "languages": [
+      "Spanish"
+    ],
+    "currency": "EUR",
+    "area_km2": 505992,
+    "alpha2": "ES",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "LKA": {
+    "code": "LKA",
+    "name": "Sri Lanka",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "capital": "Colombo",
+    "languages": [
+      "Sinhala",
+      "Tamil"
+    ],
+    "currency": "LKR",
+    "area_km2": 65610,
+    "alpha2": "LK",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "SDN": {
+    "code": "SDN",
+    "name": "Sudan",
+    "region": "Africa",
+    "subregion": "Northern Africa",
+    "capital": "Khartoum",
+    "languages": [
+      "Arabic",
+      "English"
+    ],
+    "currency": "SDG",
+    "area_km2": 1886068,
+    "alpha2": "SD",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "SUR": {
+    "code": "SUR",
+    "name": "Suriname",
+    "region": "South America",
+    "subregion": "South America",
+    "capital": "Paramaribo",
+    "languages": [
+      "Dutch"
+    ],
+    "currency": "SRD",
+    "area_km2": 163820,
+    "alpha2": "SR",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "SWE": {
+    "code": "SWE",
+    "name": "Sweden",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "capital": "Stockholm",
+    "languages": [
+      "Swedish"
+    ],
+    "currency": "SEK",
+    "area_km2": 450295,
+    "alpha2": "SE",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "CHE": {
+    "code": "CHE",
+    "name": "Switzerland",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "capital": "Bern",
+    "languages": [
+      "German",
+      "French",
+      "Italian"
+    ],
+    "currency": "CHE, CHF, CHW",
+    "area_km2": 41284,
+    "alpha2": "CH",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "SYR": {
+    "code": "SYR",
+    "name": "Syria",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "capital": "Damascus",
+    "languages": [
+      "Arabic"
+    ],
+    "currency": "SYP",
+    "area_km2": 185180,
+    "alpha2": "SY",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "TWN": {
+    "code": "TWN",
+    "name": "Taiwan",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "capital": "Taipei",
+    "languages": [
+      "Chinese"
+    ],
+    "currency": "TWD",
+    "area_km2": 36193,
+    "alpha2": "TW",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "TJK": {
+    "code": "TJK",
+    "name": "Tajikistan",
+    "region": "Asia",
+    "subregion": "Central Asia",
+    "capital": "Dushanbe",
+    "languages": [
+      "Tajik",
+      "Russian"
+    ],
+    "currency": "TJS",
+    "area_km2": 143100,
+    "alpha2": "TJ",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "TZA": {
+    "code": "TZA",
+    "name": "Tanzania",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "capital": "Dodoma",
+    "languages": [
+      "Swahili (macrolanguage)",
+      "English"
+    ],
+    "currency": "TZS",
+    "area_km2": 945087,
+    "alpha2": "TZ",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "THA": {
+    "code": "THA",
+    "name": "Thailand",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "capital": "Bangkok",
+    "languages": [
+      "Thai"
+    ],
+    "currency": "THB",
+    "area_km2": 513120,
+    "alpha2": "TH",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "TLS": {
+    "code": "TLS",
+    "name": "Timor-Leste",
+    "region": "Asia",
+    "subregion": "",
+    "capital": null,
+    "languages": [],
+    "currency": "",
+    "area_km2": null,
+    "alpha2": "TL",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "TGO": {
+    "code": "TGO",
+    "name": "Togo",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "capital": "Lomé",
+    "languages": [
+      "French"
+    ],
+    "currency": "XOF",
+    "area_km2": 56785,
+    "alpha2": "TG",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "TTO": {
+    "code": "TTO",
+    "name": "Trinidad and Tobago",
+    "region": "North America",
+    "subregion": "Caribbean",
+    "capital": "Port of Spain",
+    "languages": [
+      "English"
+    ],
+    "currency": "TTD",
+    "area_km2": 5130,
+    "alpha2": "TT",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "TUN": {
+    "code": "TUN",
+    "name": "Tunisia",
+    "region": "Africa",
+    "subregion": "Northern Africa",
+    "capital": "Tunis",
+    "languages": [
+      "Arabic"
+    ],
+    "currency": "TND",
+    "area_km2": 163610,
+    "alpha2": "TN",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "TUR": {
+    "code": "TUR",
+    "name": "Turkey",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "capital": "Ankara",
+    "languages": [
+      "Turkish"
+    ],
+    "currency": "TRY",
+    "area_km2": 783562,
+    "alpha2": "TR",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": true
+  },
+  "TKM": {
+    "code": "TKM",
+    "name": "Turkmenistan",
+    "region": "Asia",
+    "subregion": "Central Asia",
+    "capital": "Ashgabat",
+    "languages": [
+      "Turkmen",
+      "Russian"
+    ],
+    "currency": "TMT",
+    "area_km2": 488100,
+    "alpha2": "TM",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "UGA": {
+    "code": "UGA",
+    "name": "Uganda",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "capital": "Kampala",
+    "languages": [
+      "English",
+      "Swahili (macrolanguage)"
+    ],
+    "currency": "UGX",
+    "area_km2": 241550,
+    "alpha2": "UG",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "UKR": {
+    "code": "UKR",
+    "name": "Ukraine",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "capital": "Kiev",
+    "languages": [
+      "Ukrainian"
+    ],
+    "currency": "UAH",
+    "area_km2": 603700,
+    "alpha2": "UA",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": true
+  },
+  "ARE": {
+    "code": "ARE",
+    "name": "United Arab Emirates",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "capital": "Abu Dhabi",
+    "languages": [
+      "Arabic"
+    ],
+    "currency": "AED",
+    "area_km2": 83600,
+    "alpha2": "AE",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "GBR": {
+    "code": "GBR",
+    "name": "United Kingdom",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "capital": "London",
+    "languages": [
+      "English"
+    ],
+    "currency": "GBP",
+    "area_km2": 242900,
+    "alpha2": "GB",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": true
+  },
+  "USA": {
+    "code": "USA",
+    "name": "United States",
+    "region": "North America",
+    "subregion": "Northern America",
+    "capital": "Washington D.C.",
+    "languages": [
+      "English"
+    ],
+    "currency": "USD, USN, USS",
+    "area_km2": 9629091,
+    "alpha2": "US",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": true
+  },
+  "URY": {
+    "code": "URY",
+    "name": "Uruguay",
+    "region": "South America",
+    "subregion": "South America",
+    "capital": "Montevideo",
+    "languages": [
+      "Spanish"
+    ],
+    "currency": "UYI, UYU",
+    "area_km2": 181034,
+    "alpha2": "UY",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "UZB": {
+    "code": "UZB",
+    "name": "Uzbekistan",
+    "region": "Asia",
+    "subregion": "Central Asia",
+    "capital": "Tashkent",
+    "languages": [
+      "Uzbek",
+      "Russian"
+    ],
+    "currency": "UZS",
+    "area_km2": 447400,
+    "alpha2": "UZ",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "VUT": {
+    "code": "VUT",
+    "name": "Vanuatu",
+    "region": "Oceania",
+    "subregion": "Melanesia",
+    "capital": "Port Vila",
+    "languages": [
+      "Bislama",
+      "English",
+      "French"
+    ],
+    "currency": "VUV",
+    "area_km2": 12189,
+    "alpha2": "VU",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "VEN": {
+    "code": "VEN",
+    "name": "Venezuela",
+    "region": "South America",
+    "subregion": "South America",
+    "capital": "Caracas",
+    "languages": [
+      "Spanish"
+    ],
+    "currency": "VEF",
+    "area_km2": 916445,
+    "alpha2": "VE",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "VNM": {
+    "code": "VNM",
+    "name": "Vietnam",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "capital": "Hanoi",
+    "languages": [
+      "Vietnamese"
+    ],
+    "currency": "VND",
+    "area_km2": 331212,
+    "alpha2": "VN",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "ESH": {
+    "code": "ESH",
+    "name": "Western Sahara",
+    "region": "Africa",
+    "subregion": "Northern Africa",
+    "capital": "El Aaiún",
+    "languages": [
+      "Spanish"
+    ],
+    "currency": "MAD, DZD, MRO",
+    "area_km2": 266000,
+    "alpha2": "EH",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "YEM": {
+    "code": "YEM",
+    "name": "Yemen",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "capital": "Sana'a",
+    "languages": [
+      "Arabic"
+    ],
+    "currency": "YER",
+    "area_km2": 527968,
+    "alpha2": "YE",
+    "population": 41773878,
+    "population_year": 2025,
+    "metadata_source": "countryinfo",
+    "featured": true,
+    "population_source": "worldbank"
+  },
+  "ZMB": {
+    "code": "ZMB",
+    "name": "Zambia",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "capital": "Lusaka",
+    "languages": [
+      "English"
+    ],
+    "currency": "ZMK",
+    "area_km2": 752612,
+    "alpha2": "ZM",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  },
+  "ZWE": {
+    "code": "ZWE",
+    "name": "Zimbabwe",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "capital": "Harare",
+    "languages": [
+      "English",
+      "Shona",
+      "North Ndebele"
+    ],
+    "currency": "USD",
+    "area_km2": 390757,
+    "alpha2": "ZW",
+    "population": null,
+    "population_year": null,
+    "metadata_source": "countryinfo",
+    "featured": false
+  }
+}

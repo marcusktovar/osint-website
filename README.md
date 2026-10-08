@@ -1,109 +1,89 @@
-# Yemen / Field Notes
+# ATLAS / ARCHIVE — Retro World Dossier
 
-An accessible, responsive educational website about Yemen with six sections, source citations, and a scheduled data-refresh pipeline. **Works without an AI service, API key, database, or paid web host.**
+An interactive, retro-inspired world map with 177 clickable country / territory shapes, a searchable country index, 20 edited country briefs (including Yemen), dated statistics and outgoing research citations. Runs on **GitHub Pages**, with no framework, database, API key or paid hosting.
 
-![Yemen flag palette](https://img.shields.io/badge/Yemen-Field%20Notes-b64b38?style=flat-square)
+## Quick start / preview
 
-## What is included
+Your repo should contain `site/`, `scripts/`, `sources/`, `tests/`, and `.github/workflows/` at its **root**. Run this from the root folder:
 
-- `site/index.html` — semantic page structure and the decorative Yemen-inspired landscape illustration.
-- `site/style.css` — mobile-friendly site styling.
-- `site/app.js` — loads `site/data/sections.json`, creates sections, links supporting references. Uses `textContent` rather than executing source HTML.
-- `site/data/sections.json` — **already-built initial website content**, so the site works immediately.
-- `sources/editorial.json` — concise, edited contextual prose, section outlines, and attributed source links.
-- `sources/factbook_archive.json` — historical CIA World Factbook snapshot, edition dated **Jan 5, 2026**. Not a maintained API.
-- `scripts/build.py` — combines text and source data, checks Wikipedia context, reads Wikidata and World Bank data, and rewrites the website's JSON.
-- `scripts/validate.py` — catches missing sections, broken reference IDs and unexpected content shapes.
-- `.github/workflows/website.yml` — tests, updates, and deploys the website, including scheduled Monday runs.
-- `tests/test_build.py` — Python unit tests for API parsing, merging and outage behavior.
-
-## See the website on your computer
-
-You need **Python 3.10+**. From a terminal opened in the `yemen-website` folder, run:
-
-```bash
-python -m http.server 8000 --directory site
+```powershell
+py -m http.server 8000 --directory site
 ```
 
-Now open <http://localhost:8000> in a browser. Use `Ctrl+C` to stop the server. If `python` is not recognized on Windows, try `py` instead.
+Open http://localhost:8000 (or use `python` instead of `py`). Do not double-click `site/index.html`—`file://` may block `fetch()` of the bundled JSON. The site works entirely **offline from its bundled data** once served locally; no live API is needed for visitors.
 
-**Don't double-click `index.html`.** Browsers often block `fetch()` of JSON files when loaded using `file://`. Use the local server above.
+## Replace the current GitHub Pages website
 
-## Refresh source data locally
+For your existing `marcusktovar/osint-website` GitHub repository:
+
+1. **Back up the old site** in a ZIP or a branch if you might want it later.
+2. Remove the old Yemen-only `site/` folder and upload the **new `site/` folder from this project**, preserving `site/index.html`, `site/app.js`, `site/style.css`, `site/data/countries.json`, and `site/data/map.json`.
+3. Upload the new `scripts/`, `sources/`, and `tests/` folders to the repo root. Replace the old project README if desired.
+4. **Remove the older workflows** such as `.github/workflows/deploy.yml` or `website.yml` so two jobs do not try to publish GitHub Pages. Keep **only** `.github/workflows/atlas.yml` from this project. If GitHub's web file-upload picker won't include hidden `.github` folders, choose **Add file → Create new file** and create the path `.github/workflows/atlas.yml`, then paste the YAML from this ZIP.
+5. In **Settings → Pages**, keep **Source: GitHub Actions**.
+6. In the **Actions** tab, select **ATLAS - Refresh and Deploy** and choose **Run workflow**. On success, your site stays at `https://marcusktovar.github.io/osint-website/`.
+
+Note: GitHub web uploads generally accept dragged folders from File Explorer, not the standard file picker. Hidden folders may need to be created through GitHub's web editor.
+
+### If you want to deploy the website immediately without data automation
+
+You can keep your existing `deploy.yml` **temporarily** provided it already publishes the `./site` folder. Upload the new `site/` files first; the new interface will run from committed JSON. Later replace that old workflow with `atlas.yml` when you are ready for scheduled data refreshes. **Don't use both deployments at once.**
+
+## How the information works
+
+The country viewer is intentionally a **source-combining, provenance-aware static atlas**, not a live AI improviser:
+
+- `site/data/map.json`: 177 generalized geographic shapes, derived from the Natural Earth public-domain 1:110m dataset. Tiny islands and some small sovereign countries are not represented at this resolution; the world map is a general reference, not an official borders map.
+- `sources/base_countries.json`: offline country name, capital, languages, area, currency and region. These are an **undated historical CountryInfo reference**, **not** a recent verified census or real-time government source.
+- `sources/research_notes.json`: edited, original-writing topic summaries for 20 selectable countries (including Yemen), with country-specific Wikipedia source links. The rest of the map remains clickable with geographical metadata and research links but does not invent bespoke history/culture paragraphs.
+- `scripts/build.py`: requests **REST Countries** country metadata, **World Bank** latest *dated* population observations, and Wikipedia intro **availability checks** for edited countries. It merges them with the edited text and links. This is not automatic LLM paraphrasing: Wikipedia checks do not silently rewrite the narratives or political claims.
+- `site/data/countries.json`: prebuilt initial profiles shipped with the website. Statistics missing from the initial offline reference are marked **Awaiting dated sync** rather than guessed.
+
+Yemen's initial population is a **World Bank 2025 observation** preserved from the original starter project. The initial offline Factbook archive is included as a linked **historical** reference for Yemen. The CIA discontinued World Factbook publication in 2026. Government and active conflicts require independently reviewed, current information; this atlas does not automatically publish political officeholders or conflict lines.
+
+## Refresh data manually
+
+Python 3.10+; no third-party packages are needed for the build and website.
 
 ```bash
-python scripts/build.py
+python scripts/build.py              # Pull APIs when available
+python scripts/build.py --offline    # Rebuild from committed reference data only
 python scripts/validate.py
 python -m unittest discover -s tests -v
 ```
 
-No third-party Python packages are required. The command needs internet access to Wikipedia, Wikidata and World Bank public endpoints. If none of them respond, it fails **without overwriting** the existing saved site data. If some sources fail, it keeps previously dated values and labels the edition `partial`. The `--offline` option regenerates with saved facts only; it does **not** check current sources.
+If remote APIs are all unavailable, the generator preserves the previous saved file rather than asserting a fresh sync. Individual services may temporarily block rate-limited calls. Scheduled GitHub Actions refreshes run every Monday; the workflow also allows manual runs. Workflow permissions must allow Actions to deploy to Pages; granting repository contents write lets scheduled refreshes be committed to GitHub.
 
-The startup snapshot was assembled from research references on October 7, 2026. Its population value is the World Bank's **2025** estimate (41,773,878), not a 2026 count. A checked-in copy is provided so visitors see a complete page even before the first automated refresh. The snapshot isn't being represented as a successful API fetch from the packaging environment.
+### Editorial updates
 
-## Publish to GitHub Pages
+To change written briefing text or add another extended country report:
 
-1. Sign into <https://github.com> and create a **public** repository called `yemen-website` (on GitHub Free, public repos work with Pages).
-2. **Extract** the starter ZIP. Upload its contents to the **repository root**—`.github/workflows/website.yml`, `site/`, `scripts/`, and `sources/` must be in the repository, not inside an extra wrapper directory.
-3. Confirm your default branch is `main`.
-4. Open **Settings → Pages → Build and deployment → Source**, and select **GitHub Actions** (not “Deploy from a branch”).
-5. Open the **Actions** tab. The workflow `Build and publish Yemen Field Notes` should run on the first push. If Pages was configured after the first push, run the workflow using **Run workflow**.
-6. The website address will look like `https://YOUR-USERNAME.github.io/yemen-website/` once the deployment succeeds.
+1. Edit `sources/research_notes.json` for that ISO3 code (e.g. `YEM`, `USA`, `CHN`).
+2. Populate `overview`, `history`, `geography`, `culture`, and optionally `caution`. Keep the writing neutral and support claims with trusted research.
+3. Run `python scripts/build.py --offline`, then `python scripts/validate.py`.
+4. Commit the new JSON alongside the source notes. The site will display the report for that country and add it to the featured index.
 
-In repositories where Actions are restricted, enable workflows. If automated committing of refreshed JSON is blocked, verify repository **Actions → General → Workflow permissions** and organization policies. The workflow can still be adjusted to deploy the refreshed artifact without committing it.
+The left-side quick-access buttons are configured in `site/app.js` via `QUICK_CODES`. The map itself can select all 177 included Natural Earth entities. Disputed borders and administrations are particularly complex; use this layer only for generalized navigation.
 
-### Automatic updating
+## Source and licensing credits
 
-Every Monday, the workflow (a) unit-tests the data pipeline, (b) requests the latest available Wikipedia contextual extracts, Wikidata properties, and World Bank population series, (c) validates the output, (d) saves the updated JSON back to the repo, and (e) publishes the site. You can also manually trigger updates from **Actions → Run workflow**.
+- [Natural Earth](https://www.naturalearthdata.com/about/terms-of-use/) — world political boundaries, public domain.
+- [Wikipedia](https://en.wikipedia.org/wiki/Wikipedia:Copyrights) — background reference links; linked text is not reproduced in the initial narrative. Any future copying of Wikipedia extracts must respect CC BY-SA attribution and its terms.
+- [CountryInfo](https://github.com/porimol/countryinfo) — offline country metadata snapshot, may be old.
+- [REST Countries](https://restcountries.com/) — structured country names and country metadata, refreshed if accessible.
+- [World Bank](https://data.worldbank.org/indicator/SP.POP.TOTL) — dated population indicator, checked by API if available.
+- [CIA World Factbook historical archive (Yemen)](https://the-world-factbook.org/the-world-factbook/countries/yemen/) — archival source, **not** a live CIA feed.
+- [UNESCO Yemen heritage](https://whc.unesco.org/en/statesparties/ye/) — additional linked historical / cultural reference.
 
-GitHub may delay scheduled runs. If the sources are unavailable, the script preserves the previously published data rather than inventing new statistics. Note that a commit generated with `GITHUB_TOKEN` does not itself re-trigger a Pages branch build; this project **deploys within the same workflow run**, so it does not depend on such a trigger.
+UI code and original editorial writing: MIT license in `LICENSE`. The Natural Earth map data is public domain. Third-party source material follows its original terms.
 
-## How sources are *combined*, not copied
+## Interface controls
 
-This starter uses a **transparent, deterministic source combiner** rather than an AI rewriting service:
+- **Left panel:** quick-access flags, search, region filter, and entire country index.
+- **Map:** click or keyboard-focus a country; drag to pan; use mouse wheel or +/- to zoom; **RESET** shows full globe.
+- **Right panel:** statistics, history, landscape, culture, and direct research links.
+- Keyboard: **/** focuses search; **Esc** clears and leaves search. Country links use `#ISO3` URLs, allowing direct links such as `#YEM` or `#JPN`.
 
-1. An editor supplies brief neutral narrative in `sources/editorial.json`, with source IDs for each paragraph.
-2. The generator appends explanatory sentences that interpolate **verified, dated source facts** (archived Factbook measurements; Wikidata's state-formation date; World Bank population observation).
-3. It fetches Wikipedia introductions as an additional **corroboration** input, records conservative topic checks, and links the source. Wikipedia paragraphs are not automatically copied onto the site.
-4. The website shows references beside each paragraph and a source library with complete outgoing links.
+## Limitations
 
-This keeps output legible, attribution visible and unsupported machine-generated claims out of the public site. **This is not an AI paraphraser and does not automatically rewrite every new Wikipedia edit into the summary.** If you want AI-based narrative synthesis later, add a reviewed draft/approval step before publishing; never auto-publish generated government claims.
-
-## Updating what the website says
-
-- Edit a section in `sources/editorial.json`; add only claims supported by its `sources` identifiers.
-- Update the archived Factbook fields only if you have a different archive edition; change the edition date and URL as well.
-- Update `sources/editorial.json` to add or revise references.
-- Run `python scripts/build.py`, then `python scripts/validate.py`.
-- Commit and push; GitHub Pages will redeploy.
-
-### Accuracy and licenses
-
-- The CIA Factbook copy is dated **2026-01-05** and is a historical snapshot, **not live CIA data**.
-- Wikipedia and UNESCO background texts have their own attribution and licensing requirements. Our original prose is not copied verbatim, but source links are maintained so readers can inspect evidence and conditions of reuse.
-- World Bank population data carries its original observation year and attribution; see the World Bank data portal for usage terms.
-- **Government** is not automatically updated with officeholders. Conflict and control may change and the section requires editorial review of authoritative, dated coverage.
-- No images were scraped or embedded: the hero is made from CSS geometry to avoid licensing and reliability issues.
-
-## Troubleshooting
-
-| Symptom | What to do |
-| --- | --- |
-| Site says data unavailable | Start the site with `python -m http.server 8000 --directory site` from the repository root. |
-| Pages reports no deployment | Ensure **Settings → Pages → Source** is **GitHub Actions** and manually run the workflow. |
-| `build.py` can't fetch APIs | Verify internet, DNS and network policy. Saved data remains in `site/data/sections.json`. |
-| Scheduled workflow fails | See the Actions logs. Wikipedia/Wikidata/World Bank may temporarily block requests; retry manually later. |
-| Hosted site path is wrong | Keep `site/app.js` and `site/data/sections.json` together; all asset paths are relative. |
-
-## Reference links
-
-- [Wikipedia / Yemen](https://en.wikipedia.org/wiki/Yemen)
-- [Wikidata / Yemen (Q805)](https://www.wikidata.org/wiki/Q805)
-- [CIA World Factbook archived Yemen entry](https://the-world-factbook.org/the-world-factbook/countries/yemen/)
-- [World Bank / population, Yemen](https://data.worldbank.org/indicator/SP.POP.TOTL?locations=YE)
-- [UNESCO World Heritage / Yemen](https://whc.unesco.org/en/statesparties/ye/)
-- [GitHub Pages documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)
-
-## Project license
-
-The original site code, art, and original editorial narrative in this starter are released under the MIT License (see `LICENSE`). Source facts and third-party texts remain subject to their own applicable terms; a project's MIT license cannot relicense them.
+This intentionally uses 1:110m coarse map geometry. At this scale, not every microstate/island appears; some disputed boundaries are simplified. Offline reference metadata may be old until an online refresh succeeds. The curated text is not an automatically updated news feed. Population is only shown with an observation year. For publication requiring official political maps or current leadership, add human editorial review and more precise sources.

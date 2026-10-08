@@ -1,249 +1,165 @@
 #!/usr/bin/env python3
-"""Build a traceable Yemen country guide from curated prose and public data.
+"""Refresh a provenance-aware multi-country dataset for the static atlas.
 
-No AI key required. Never invents live political information or silently changes
-source dates. External requests only run when --offline is not specified.
+Offline seed uses the packaged historical CountryInfo reference and curated,
+source-linked prose. Online mode enriches it with Rest Countries API metadata,
+World Bank population observations and Wikipedia introductory article checks.
+Never treats unverified excerpts as published original editorial prose.
 """
 from __future__ import annotations
-
 import argparse
-import copy
 from datetime import datetime, timezone
 import json
 from pathlib import Path
-import re
-import sys
+import time
 from urllib.error import HTTPError, URLError
-from urllib.parse import urlencode
+from urllib.parse import urlencode, quote
 from urllib.request import Request, urlopen
 
-ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT / 'site' / 'data' / 'sections.json'
-USER_AGENT = 'YemenFieldNotesStarter/1.0 (educational project; https://github.com/)' 
-WIKI_ARTICLES = {
-    'wiki_yemen': 'Yemen',
-    'wiki_geography': 'Geography of Yemen',
-    'wiki_history': 'History of Yemen',
-    'wiki_politics': 'Politics of Yemen',
-    'wiki_culture': 'Culture of Yemen',
+ROOT=Path(__file__).resolve().parents[1]
+SEED=ROOT/'sources/base_countries.json'
+NOTES=ROOT/'sources/research_notes.json'
+OUTPUT=ROOT/'site/data/countries.json'
+USER_AGENT='AtlasArchiveEducational/1.0 (GitHub Pages static informational project; contact repository owner)'
+COMMON_SOURCES={
+ 'naturalearth':{'name':'Natural Earth 1:110m','url':'https://www.naturalearthdata.com/about/terms-of-use/'},
+ 'countryinfo':{'name':'CountryInfo offline reference (undated)','url':'https://github.com/porimol/countryinfo'},
+ 'restcountries':{'name':'REST Countries API','url':'https://restcountries.com/'},
+ 'worldbank':{'name':'World Bank population indicator','url':'https://data.worldbank.org/indicator/SP.POP.TOTL'},
+ 'wikipedia':{'name':'Wikipedia contributors (CC BY-SA)','url':'https://en.wikipedia.org/wiki/Wikipedia:Copyrights'}
 }
 
+def load_json(path):
+ return json.loads(path.read_text(encoding='utf-8'))
 
-def read_json(path):
-    with open(path, 'r', encoding='utf-8') as f:
-        return json.load(f)
+def get_json(url, timeout=18):
+ req=Request(url,headers={'User-Agent':USER_AGENT,'Accept':'application/json'})
+ with urlopen(req,timeout=timeout) as resp:
+  if resp.status!=200:raise ValueError(f'HTTP {resp.status}')
+  return json.load(resp)
 
+def clean_restcountries(rows):
+ """Return verified structured facts keyed by standard alpha-3 code."""
+ if not isinstance(rows,list): raise ValueError('Expected REST Countries list')
+ cleaned={}
+ for r in rows:
+  if not isinstance(r,dict):continue
+  key=r.get('cca3')
+  if not isinstance(key,str) or len(key)!=3:continue
+  cap=r.get('capital')
+  capital=', '.join(str(c) for c in cap[:2]) if isinstance(cap,list) else None
+  l=r.get('languages');languages=list(l.values())[:5] if isinstance(l,dict) else []
+  cur=r.get('currencies');currency=', '.join(list(cur)[:3]) if isinstance(cur,dict) else ''
+  area=r.get('area')
+  if not isinstance(area,(int,float)) or area<=0 or area>20_000_000:area=None
+  cleaned[key]={'capital':capital,'languages':languages,'currency':currency,'area_km2':area,
+                 'subregion':r.get('subregion') or '', 'region_api':r.get('region') or ''}
+ return cleaned
 
-def fetch_json(url, timeout=18):
-    req = Request(url, headers={'User-Agent': USER_AGENT, 'Accept': 'application/json'})
-    with urlopen(req, timeout=timeout) as response:
-        if response.status != 200:
-            raise ValueError(f'HTTP {response.status}')
-        return json.load(response)
+def parse_worldbank(raw):
+ """The most recent valid dated observation per ISO3 code."""
+ if not isinstance(raw,list) or len(raw)<2 or not isinstance(raw[1],list):raise ValueError('Invalid World Bank response')
+ results={}
+ for row in raw[1]:
+  if not isinstance(row,dict):continue
+  info=row.get('countryiso3code') or ''
+  try:
+   year=int(row.get('date'));val=float(row.get('value'))
+  except (TypeError,ValueError):continue
+  if len(info)!=3 or not 1950<=year<=2100 or not 0<val<2_000_000_000:continue
+  if info not in results or year>results[info][1]:results[info]=(round(val),year)
+ return results
 
+def wikipedia_confirmed(raw):
+ """Article availability only; not evidence that a changing government claim is true."""
+ if not isinstance(raw,dict):return set()
+ pages=raw.get('query',{}).get('pages',[])
+ if isinstance(pages,dict):pages=list(pages.values())
+ return {p.get('title','') for p in pages if isinstance(p,dict) and 'missing' not in p and p.get('extract')}
 
-def get_wikipedia_excerpt(title):
-    url = 'https://en.wikipedia.org/w/api.php?' + urlencode({
-        'action': 'query', 'format': 'json', 'prop': 'extracts',
-        'titles': title, 'exintro': '1', 'explaintext': '1',
-        'exchars': '1100', 'redirects': '1', 'formatversion': '2'
-    })
-    pages = fetch_json(url)['query']['pages']
-    extract = pages[0].get('extract', '').strip()
-    if not extract:
-        raise ValueError(f'No Wikipedia extract found for {title}')
-    return extract
+def make_dataset(base, notes, *, rest=None, populations=None, wiki_titles=None, timestamp=None, online=False, warnings=None):
+ rest=rest or {};populations=populations or {};wiki_titles=wiki_titles or set();warnings=warnings or []
+ countries={}
+ for code,seed in base.items():
+  d={**seed}
+  if code in rest:
+   info=rest[code]
+   for key in ('capital','languages','currency','area_km2','subregion'):
+    if info.get(key):d[key]=info[key]
+   d['metadata_source']='restcountries'
+  if code in populations:
+   n,year=populations[code]
+   old_year=d.get('population_year') or 0
+   if year>=old_year:
+    d['population']=n;d['population_year']=year;d['population_source']='worldbank'
+  desc=notes.get(code,{})
+  d['notes']={k:desc[k] for k in ('overview','history','geography','culture','caution') if desc.get(k)}
+  article=desc.get('wiki_page') or d['name']
+  # Wiki article links are research references, not automatically copied text.
+  d['references']=[{'label':'Wikipedia · '+article,'url':'https://en.wikipedia.org/wiki/'+quote(article.replace(' ','_'),safe='_')},
+                   {'label':'Natural Earth · mapping','url':'https://www.naturalearthdata.com/'},
+                   {'label':'CountryInfo · reference snapshot','url':'https://github.com/porimol/countryinfo'}]
+  if d.get('alpha2') and len(d['alpha2'])==2:
+   d['references'].append({'label':'World Bank · population','url':f"https://data.worldbank.org/indicator/SP.POP.TOTL?locations={d['alpha2']}"})
+  if code in rest:d['references'].append({'label':'REST Countries · current metadata','url':'https://restcountries.com/'})
+  for x in desc.get('extra_sources',[]):
+   if x.get('label') and x.get('url','').startswith('https://'):d['references'].append(x)
+  d['wiki_checked']=article in wiki_titles
+  countries[code]=d
+ return {'project':'ATLAS / GLOBAL DOSSIER','edition':'REFERENCE BUILD' if not online else ('SYNCED' if not warnings else 'PARTIAL SYNC'),
+         'built_at':timestamp or datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
+         'feature_count':len(base),'profile_count':len(notes),'countries':countries,
+         'sources':COMMON_SOURCES,'warnings':warnings,
+         'methodology':'Manually reviewed thematic briefs are combined with structured, dated external facts. Live API data enriches but never silently replaces editorial history or political claims. Map uses generalized Natural Earth boundaries.'}
 
-
-def parse_wikidata(entity):
-    claims = entity['entities']['Q805']['claims']
-
-    def get_value(prop):
-        for statement in claims.get(prop, []):
-            if statement.get('rank') == 'deprecated':
-                continue
-            value = statement.get('mainsnak', {}).get('datavalue', {}).get('value')
-            if value is not None:
-                return value
-        return None
-
-    iso = get_value('P297')
-    raw_start = get_value('P571')
-    iso_code = iso if isinstance(iso, str) and re.fullmatch(r'[A-Z]{2}', iso) else None
-    founding_date = None
-    if isinstance(raw_start, dict):
-        match = re.search(r'([12]\d{3})-(\d\d)-(\d\d)', raw_start.get('time', ''))
-        if match:
-            year, month, day = (int(x) for x in match.groups())
-            if 1800 <= year <= 2100 and 1 <= month <= 12 and 1 <= day <= 31:
-                founding_date = f'{day} {datetime(year, month, day).strftime("%B")} {year}'
-    return {'country_code': iso_code, 'inception_date': founding_date}
-
-
-def parse_population(response):
-    if not isinstance(response, list) or len(response) < 2 or not isinstance(response[1], list):
-        raise ValueError('Unexpected World Bank response')
-    candidates = []
-    for item in response[1]:
-        try:
-            year = int(item.get('date', ''))
-            value = item.get('value')
-            if value is not None and 1900 <= year <= 2100 and 0 < float(value) < 1_000_000_000:
-                candidates.append((year, round(float(value))))
-        except (TypeError, ValueError):
-            continue
-    if not candidates:
-        raise ValueError('No usable World Bank population series data')
-    year, value = max(candidates)
-    return {'year': year, 'value': value, 'source': 'worldbank'}
-
-
-def compose(editorial, archive, population, wikidata, checked, mode, warnings, checked_at):
-    sections = copy.deepcopy(editorial['sections'])
-    by_id = {s['id']: s for s in sections}
-    facts = archive['facts']
-
-    def add(section_id, sentence, sources):
-        by_id[section_id]['paragraphs'].append({'text': sentence, 'sources': sources})
-
-    add('geography',
-        f"The archived World Factbook lists Yemen's area as {facts['area_sq_km']:,} square kilometers and its coastline as {facts['coastline_km']:,} kilometers. These are archive figures from {archive['edition_date']}, not measurements refreshed today.",
-        ['cia_archive'])
-
-    if wikidata.get('inception_date'):
-        add('history',
-            f"Wikidata records {wikidata['inception_date']} as the inception date of the modern Republic of Yemen.",
-            ['wikidata'])
-
-    if population and population.get('value') and population.get('year'):
-        add('people',
-            f"For {population['year']}, the World Bank's population series records approximately {population['value']:,} people. The year is essential: this figure is not presented as a real-time census.",
-            ['worldbank'])
-
-    # Wikipedia is fetched as a changing corroborating research input, never
-    # pasted unedited into prose. These conservative checks only add statements
-    # already backed by the editorial research and a linked source.
-    wiki_evidence = {
-        'overview': ('wiki_yemen', ['arabian', 'peninsula']),
-        'geography': ('wiki_geography', ['mountain', 'desert']),
-        'history': ('wiki_history', ['saba']),
-        'government': ('wiki_politics', ['conflict']),
-        'culture': ('wiki_culture', ['arabic']),
-    }
-    for section_id, (source_id, tokens) in wiki_evidence.items():
-        excerpt = checked.get('wiki_excerpts', {}).get(source_id, '').lower()
-        by_id[section_id]['encyclopedia_checked'] = (
-            bool(excerpt) and all(token in excerpt for token in tokens)
-        )
-
-    for section in sections:
-        source_ids = []
-        for paragraph in section['paragraphs']:
-            if not isinstance(paragraph['text'], str) or not paragraph['text'].strip():
-                raise ValueError(f"Empty paragraph for {section['id']}")
-            for key in paragraph['sources']:
-                if key not in editorial['sources']:
-                    raise ValueError(f'Unknown source {key}')
-                if key not in source_ids:
-                    source_ids.append(key)
-        section['source_ids'] = source_ids
-
-    population_value = population.get('value') if population else None
-    population_year = population.get('year') if population else None
-    stats = [
-        {'label':'Land area', 'value':f"{facts['area_sq_km']:,}", 'unit':'km²', 'detail':'CIA archived figure · Jan 2026', 'source_id':'cia_archive'},
-        {'label':'Population', 'value':f"{population_value / 1_000_000:.1f}M" if population_value else '—',
-         'unit':'people', 'detail':f'World Bank · {population_year}' if population_year else 'No verified value', 'source_id':'worldbank'},
-        {'label':'World Heritage sites', 'value':'5', 'unit':'UNESCO-listed', 'detail':'UNESCO World Heritage List', 'source_id':'unesco'},
-        {'label':'Modern unification', 'value':'1990', 'unit':'year', 'detail':'North and South Yemen', 'source_id':'wikidata'},
-    ]
-    return {
-        'site_name':'Yemen / Field Notes',
-        'site_subtitle':'An independent, sourced introduction to Yemen',
-        'build_mode':mode,
-        'generated_at_utc':checked_at,
-        'source_snapshot':archive['edition_date'],
-        'edition_note':editorial['edition_note'],
-        'stats':stats,
-        'sections':sections,
-        'sources':editorial['sources'],
-        'live_checks':checked.get('live_checks', {}),
-        'warnings':warnings,
-        'population':population,
-        'wikidata':wikidata,
-        'methodology':'Curated editorial text combines CIA archive/UNESCO references with live Wikidata and World Bank facts. Wikipedia intros are fetched to corroborate selected themes; no unreviewed generated narrative is published.'
-    }
-
-
-def build(offline=False, now=None, fetcher=fetch_json, wiki_fetcher=None):
-    editorial = read_json(ROOT / 'sources' / 'editorial.json')
-    archive = read_json(ROOT / 'sources' / 'factbook_archive.json')
-    previous = read_json(OUTPUT) if OUTPUT.exists() else {}
-    # Transparent seed data from the World Bank page, checked 2026-10-07.
-    population = previous.get('population') or {'value':41773878,'year':2025,'source':'worldbank','checked_at':'2026-10-07'}
-    wikidata = previous.get('wikidata') or {'country_code':'YE','inception_date':'22 May 1990'}
-    checked = {'live_checks':{}, 'wiki_excerpts':{}}
-    warnings = []
-    now = now or datetime.now(timezone.utc)
-    timestamp = now.isoformat(timespec='seconds').replace('+00:00','Z')
-    wiki_fetcher = wiki_fetcher or get_wikipedia_excerpt
-
-    if not offline:
-        for source_id, article in WIKI_ARTICLES.items():
-            try:
-                excerpt = wiki_fetcher(article)
-                if not isinstance(excerpt, str) or len(excerpt) < 20:
-                    raise ValueError('No substantial text returned')
-                checked['wiki_excerpts'][source_id] = excerpt
-                checked['live_checks'][source_id] = timestamp
-            except (HTTPError, URLError, TimeoutError, ValueError, KeyError, OSError) as exc:
-                warnings.append(f'Wikipedia article {article}: {type(exc).__name__}')
-
-        try:
-            raw = fetcher('https://www.wikidata.org/wiki/Special:EntityData/Q805.json')
-            new_wikidata = parse_wikidata(raw)
-            if any(new_wikidata.values()):
-                wikidata = {**wikidata, **{k:v for k,v in new_wikidata.items() if v}}
-            checked['live_checks']['wikidata'] = timestamp
-        except (HTTPError, URLError, TimeoutError, ValueError, KeyError, OSError) as exc:
-            warnings.append(f'Wikidata: {type(exc).__name__}')
-
-        try:
-            raw = fetcher('https://api.worldbank.org/v2/country/YEM/indicator/SP.POP.TOTL?format=json&mrv=12')
-            fresh = parse_population(raw)
-            # An upstream error should not make an older number appear newer.
-            if not population or fresh['year'] >= population['year']:
-                population = {**fresh, 'checked_at':timestamp[:10]}
-            checked['live_checks']['worldbank'] = timestamp
-        except (HTTPError, URLError, TimeoutError, ValueError, KeyError, OSError) as exc:
-            warnings.append(f'World Bank: {type(exc).__name__}')
-
-    checks = len(checked['live_checks'])
-    mode = 'starter' if offline else ('refreshed' if checks == len(WIKI_ARTICLES) + 2 else 'partial' if checks else 'cached')
-    if not offline and checks == 0:
-        raise RuntimeError('No external sources could be checked; keeping existing published data unchanged')
-    data = compose(editorial, archive, population, wikidata, checked, mode, warnings, timestamp if not offline else '2026-10-07T00:00:00Z')
-    if offline:
-        data['warnings'] = ['Starter snapshot: the network sources were not queried during packaging. Run build.py to refresh.']
-    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT.write_text(json.dumps(data, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
-    return data
-
+def refresh(fetcher=get_json):
+ errors=[];rest={};population={};confirmed=set();success=0
+ try:
+  raw=fetcher('https://restcountries.com/v3.1/all?fields=name,cca2,cca3,capital,region,subregion,area,languages,currencies')
+  rest=clean_restcountries(raw)
+  if len(rest)<100:raise ValueError('REST Countries response unexpectedly short')
+  success+=1
+ except (URLError,HTTPError,TimeoutError,ValueError,TypeError,KeyError,OSError) as e:errors.append('REST Countries: '+type(e).__name__)
+ # Group queries avoid overly long URLs and allow independent partial successes.
+ base=load_json(SEED)
+ valid=[c for c in base if len(c)==3 and c.isalpha() and not c.startswith('X')]
+ for start in range(0,len(valid),30):
+  batch=valid[start:start+30]
+  url=f"https://api.worldbank.org/v2/country/{';'.join(batch)}/indicator/SP.POP.TOTL?format=json&mrv=1&per_page=120"
+  try:
+   values=parse_worldbank(fetcher(url));population.update(values)
+  except (URLError,HTTPError,TimeoutError,ValueError,TypeError,KeyError,OSError) as e:
+   errors.append('World Bank batch: '+type(e).__name__)
+ if len(population)>20:success+=1
+ notes=load_json(NOTES)
+ titles=[(entry.get('wiki_page') or base[k]['name']) for k,entry in notes.items()]
+ params=urlencode({'action':'query','format':'json','prop':'extracts','exintro':'1','explaintext':'1','exchars':'260','titles':'|'.join(titles),'formatversion':'2','redirects':'1'})
+ try:
+  confirmed=wikipedia_confirmed(fetcher('https://en.wikipedia.org/w/api.php?'+params))
+  if confirmed: success+=1
+ except (URLError,HTTPError,TimeoutError,ValueError,TypeError,KeyError,OSError) as e:errors.append('Wikipedia: '+type(e).__name__)
+ return rest,population,confirmed,errors,success
 
 def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--offline', action='store_true', help='generate using the dated seed and curated source snapshots')
-    args = parser.parse_args()
-    try:
-        data = build(offline=args.offline)
-    except Exception as exc:
-        print(f'Build failed; last published data preserved: {exc}', file=sys.stderr)
-        return 1
-    print(f"Created {OUTPUT.relative_to(ROOT)}: {len(data['sections'])} sections, mode={data['build_mode']}")
-    for warning in data['warnings']:
-        print('Warning:', warning)
-    return 0
+ p=argparse.ArgumentParser();p.add_argument('--offline',action='store_true',help='Rebuild only from committed reference data')
+ args=p.parse_args();base=load_json(SEED);notes=load_json(NOTES)
+ if args.offline:
+  data=make_dataset(base,notes,online=False)
+ else:
+  rest,pop,wiki,errors,n_ok=refresh()
+  # Avoid republishing an apparently fresher snapshot when every network source is unavailable.
+  if n_ok==0 and OUTPUT.exists():
+   print('Remote APIs unavailable; keeping last-known-good countries.json. Problems:', '; '.join(errors));return
+  data=make_dataset(base,notes,rest=rest,populations=pop,wiki_titles=wiki,online=True,warnings=errors)
+  # Persist last known dated population on partial source outages, never make up freshness.
+  if OUTPUT.exists():
+   previous=load_json(OUTPUT).get('countries',{})
+   for code,d in data['countries'].items():
+    old=previous.get(code,{})
+    if old.get('population_year') and old['population_year']>(d.get('population_year') or 0):
+     for k in ('population','population_year','population_source'):d[k]=old.get(k)
+ out=OUTPUT;out.parent.mkdir(parents=True,exist_ok=True)
+ tmp=out.with_suffix('.tmp');tmp.write_text(json.dumps(data,ensure_ascii=False,separators=(',',':'))+'\n',encoding='utf-8');tmp.replace(out)
+ print('Built',out,'profiles',len(data['countries']),'edition',data['edition'],'warnings',len(data['warnings']))
 
-
-if __name__ == '__main__':
-    raise SystemExit(main())
+if __name__=='__main__':main()
